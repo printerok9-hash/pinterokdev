@@ -1,6 +1,5 @@
 import { Shell, whatsapp } from "@/components/site";
 import Intro from "@/components/intro";
-import ContactForm from "@/components/contact-form";
 import Calendly from "@/components/calendly";
 import { FiPhone, FiCheckCircle } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
@@ -15,7 +14,7 @@ export default function Book() {
       <Intro
         label="Book a repair"
         title="Your next good print starts here."
-        description="Book your printer repair appointment. Tell us about your printer and choose a preferred date — we will take it from there."
+        description="Choose an available time in Calendly to discuss your printer repair."
       />
       <section className="section container booking-grid">
         <div>
@@ -26,8 +25,9 @@ export default function Book() {
             More getting things done.
           </h2>
           <p>
-            Submit a repair request and our team will get in touch to confirm
-            availability, discuss the issue and agree the next steps.
+            Choose an available time in Calendly and share your repair details.
+            Calendly will send your booking confirmation and appointment
+            details.
           </p>
           <ul className="checklist">
             {[
@@ -52,9 +52,8 @@ export default function Book() {
               Book through WhatsApp
             </a>
           </div>
-          <Calendly />
         </div>
-        <ContactForm booking />
+        <Calendly />
       </section>
     </Shell>
   );

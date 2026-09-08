@@ -25,10 +25,10 @@ export default function Privacy() {
             <p>
               Enquiries are stored in our service database. Appointment and
               enquiry notifications may be sent to printerok9@gmail.com through
-              our email provider. If you choose to load Calendly or contact us
-              through WhatsApp, those services handle information under their
-              own privacy policies. We do not load Calendly until you request
-              it.
+              our email provider. Calendly loads automatically on booking and
+              service pages. If you book with Calendly or contact us through
+              WhatsApp, those services handle information under their own
+              privacy policies.
             </p>
           </section>
           <section>
@@ -36,8 +36,8 @@ export default function Privacy() {
             <p>
               The public website does not use advertising or analytics cookies.
               The admin area uses an essential session cookie to keep authorised
-              staff signed in. Calendly may use its own cookies after you choose
-              to load its calendar.
+              staff signed in. Calendly may use its own cookies when its
+              embedded calendar loads.
             </p>
           </section>
           <section>

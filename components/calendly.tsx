@@ -1,7 +1,5 @@
 "use client";
-import { useState } from "react";
 export default function Calendly() {
-  const [loaded, setLoaded] = useState(false);
   const raw = process.env.NEXT_PUBLIC_CALENDLY_URL;
   let url: URL | undefined;
   try {
@@ -11,27 +9,33 @@ export default function Calendly() {
         url = parsed;
     }
   } catch {}
-  if (!url) return null;
+  if (!url)
+    return (
+      <div className="booking-options">
+        <h3>Arrange your appointment</h3>
+        <p>
+          Online booking is currently unavailable. Call us to arrange a
+          convenient time.
+        </p>
+        <a className="button" href="tel:+447441448082">
+          Call +44 7441448082
+        </a>
+      </div>
+    );
   url.searchParams.set("hide_gdpr_banner", "0");
   url.searchParams.set("primary_color", "2563eb");
   return (
     <div className="booking-options">
       <h3>Choose a time online</h3>
       <p>
-        Calendly is an external scheduling provider. Load the calendar to view
-        available times and book directly.
+        Choose an available time and book with Calendly right here in this
+        section.
       </p>
-      {loaded ? (
-        <iframe
-          title="Book a Pinterok appointment with Calendly"
-          src={url.toString()}
-          className="calendly-frame"
-        />
-      ) : (
-        <button className="button" onClick={() => setLoaded(true)}>
-          Load appointment calendar ↗
-        </button>
-      )}
+      <iframe
+        title="Book a Pinterok appointment with Calendly"
+        src={url.toString()}
+        className="calendly-frame"
+      />
     </div>
   );
 }

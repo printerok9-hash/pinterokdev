@@ -114,8 +114,8 @@ export default function ServiceExplorer() {
                     ))}
                   </ul>
                   <div className="service-detail-actions">
-                    <Link href="/contact" className="button">
-                      {option.action}
+                    <Link href="/book" className="button">
+                      Book a consultation
                       <FiArrowUpRight aria-hidden="true" />
                     </Link>
                     <a href="tel:+447441448082">

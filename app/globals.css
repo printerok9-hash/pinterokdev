@@ -3205,19 +3205,32 @@ p {
 .admin-login,
 .admin-panel,
 .stat-card {
-  background: linear-gradient(140deg, #edf5ffd9, #b8d2f2bf 58%, #b1d6e3c9);
+  background:
+    linear-gradient(
+      125deg,
+      #ffffffb3,
+      #ffffff30 24%,
+      transparent 25%,
+      #ffffff08 65%,
+      #ffffff66
+    ),
+    linear-gradient(140deg, #edf5ff80, #c9ddf259 58%, #c4e0ea70);
   border: 1px solid #f3f8ffd9;
   border-radius: 16px;
-  box-shadow: var(--glass-shadow);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-  backdrop-filter: blur(18px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 #ffffffeb,
+    inset 1px 0 0 #ffffff80,
+    inset 0 -1px 0 #ffffff70,
+    0 16px 40px #173e6724;
+  -webkit-backdrop-filter: blur(26px) saturate(170%);
+  backdrop-filter: blur(26px) saturate(170%);
   color: var(--surface-text);
 }
 .benefit-strip .benefit:nth-child(2) {
-  background: linear-gradient(140deg, #e7efffdb, #c0c9efcf);
+  background: linear-gradient(140deg, #ffffffb3, #e7efff50 45%, #c0c9ef70);
 }
 .benefit-strip .benefit:nth-child(3) {
-  background: linear-gradient(140deg, #dceffbdb, #a7d4e2cf);
+  background: linear-gradient(140deg, #ffffffb3, #eefaff50 45%, #a7d4e270);
 }
 .benefit-strip .benefit strong,
 .step h3 {
@@ -3281,20 +3294,30 @@ p {
 .why-grid .service-card,
 .blog-card {
   --card-tint: 22, 64, 126;
-  background: linear-gradient(
-    140deg,
-    rgba(12, 35, 76, 0.96),
-    rgba(var(--card-tint), 0.9) 64%,
-    rgba(24, 87, 112, 0.9)
-  );
-  border: 1px solid #abcfff8a;
+  background:
+    linear-gradient(
+      125deg,
+      #ffffff38,
+      #ffffff0d 26%,
+      transparent 27%,
+      transparent 65%,
+      #ffffff18
+    ),
+    linear-gradient(
+      140deg,
+      rgba(12, 35, 76, 0.88),
+      rgba(var(--card-tint), 0.8) 64%,
+      rgba(24, 87, 112, 0.82)
+    );
+  border: 1px solid #c7e1ffb3;
   border-radius: 18px;
   box-shadow:
     0 16px 36px #071a3d26,
-    inset 0 1px 0 #ffffff38,
-    inset 0 -1px 0 #81b0ef35;
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
-  backdrop-filter: blur(20px) saturate(150%);
+    inset 0 1px 0 #ffffff80,
+    inset 1px 0 0 #ffffff30,
+    inset 0 -1px 0 #81b0ef70;
+  -webkit-backdrop-filter: blur(28px) saturate(175%);
+  backdrop-filter: blur(28px) saturate(175%);
   color: #f4f8ff;
 }
 .service-grid .service-card:nth-child(2),
@@ -3345,7 +3368,9 @@ p {
     inset 0 1px 0 #ffffff60;
 }
 .problem {
-  background: linear-gradient(135deg, #204d86c9, #163759df);
+  background:
+    linear-gradient(125deg, #ffffff18, transparent 55%),
+    linear-gradient(135deg, #204d86b8, #163759cf);
   border: 1px solid #86b6f05c;
   border-radius: 12px;
   box-shadow:
@@ -3374,7 +3399,7 @@ p {
   margin-bottom: 10px;
   border: 1px solid #edf6ffc7;
   border-radius: 12px;
-  background: linear-gradient(120deg, #e5f0ffda, #bed7f1cc);
+  background: linear-gradient(120deg, #ffffffb3, #f4f9ff50 40%, #bed7f170);
   box-shadow:
     0 5px 16px #123b8c0a,
     inset 0 1px 0 #ffffff70;
@@ -3388,12 +3413,13 @@ p {
   color: #3e5776;
 }
 .contact-method {
-  background: linear-gradient(120deg, #e2eefcce, #bcd7efad);
+  background: linear-gradient(120deg, #ffffffb3, #f4f9ff50 40%, #bcd7ef66);
   border: 1px solid #eff7ffb8;
   border-radius: 12px;
   padding: 18px;
   margin-bottom: 12px;
   box-shadow: inset 0 1px 0 #ffffff70;
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
 .contact-method small {
@@ -3402,13 +3428,21 @@ p {
 
 /* The enquiry panel stays calm, with coloured glass and distinct input surfaces. */
 .contact-form {
-  background: linear-gradient(145deg, #e6f0fcf5, #cddff4ed 58%, #bcdae6f0);
+  background:
+    linear-gradient(
+      125deg,
+      #ffffffa6,
+      #ffffff18 30%,
+      transparent 31%,
+      #ffffff40
+    ),
+    linear-gradient(145deg, #e6f0fc99, #cddff480 58%, #bcdae68c);
   border-color: #f1f7ffdb;
   box-shadow:
     0 22px 56px #071a3d1e,
     inset 0 1px 0 #ffffffa6;
-  -webkit-backdrop-filter: blur(22px) saturate(135%);
-  backdrop-filter: blur(22px) saturate(135%);
+  -webkit-backdrop-filter: blur(28px) saturate(165%);
+  backdrop-filter: blur(28px) saturate(165%);
 }
 .contact-form-heading {
   border-bottom-color: #8facd34d;
@@ -3681,10 +3715,11 @@ p {
   overflow: hidden;
   border: 1px solid #a5c7ee;
   border-radius: 24px;
-  background: linear-gradient(135deg, #e5f0ffeb, #bed5eee8 65%, #b5d9e2e8);
+  background: linear-gradient(135deg, #f1f7ffcc, #bed5eeb8 65%, #b5d9e2bf);
   box-shadow:
     0 24px 64px #071a3d18,
     inset 0 1px 0 #ffffffa6;
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
 .service-tabs {
@@ -3910,7 +3945,7 @@ p {
   .service-enquiry-layout {
     grid-template-columns: minmax(0, 1fr);
   }
-  .service-enquiry-layout > .contact-form {
+  .service-enquiry-layout > .booking-options {
     width: 100%;
     max-width: 680px;
     justify-self: center;
@@ -4314,5 +4349,191 @@ p {
 @media (prefers-reduced-motion: reduce) {
   .coupon-book:hover {
     transform: none;
+  }
+}
+
+/* Admin record search, filters and page navigation. */
+.admin-list-controls {
+  margin: 24px 0;
+}
+.admin-search-row {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.admin-search-row .admin-field {
+  margin: 0;
+}
+.admin-search {
+  flex: 1 1 300px;
+}
+.admin-search-row > button {
+  min-height: 44px;
+}
+.admin-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  padding-top: 20px;
+}
+.admin-list-controls > p {
+  margin-top: 12px;
+  color: #425d7a;
+}
+.admin-data-label {
+  display: block;
+  margin-top: 8px;
+  color: #425d7a;
+  font-size: 12px;
+  font-weight: 600;
+}
+.admin-table td {
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.admin-table {
+  min-width: 700px;
+}
+.admin-pagination,
+.admin-pagination > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.admin-pagination {
+  padding-top: 24px;
+}
+.admin-pagination button {
+  padding: 8px 12px;
+  border: 1px solid #92afd0;
+  background: #eef5fc;
+  border-radius: 8px;
+  color: #203d60;
+}
+.admin-pagination button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+/* Collapsible admin section navigation. */
+.admin-workspace {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+.admin-workspace.sidebar-collapsed {
+  grid-template-columns: 76px minmax(0, 1fr);
+}
+.admin-main {
+  min-width: 0;
+}
+.admin-sidebar {
+  position: sticky;
+  top: 24px;
+  padding: 16px 12px;
+  border: 1px solid #ffffffb3;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #edf5ffd9, #c9ddf299);
+  box-shadow:
+    inset 0 1px 0 #fff,
+    0 12px 32px #173e6714;
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+.admin-sidebar-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 4px 16px;
+  color: #425d7a;
+  font-weight: 600;
+}
+.admin-sidebar-toggle {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #92afd080;
+  background: #ffffff80;
+  color: #173e67;
+}
+.admin-sidebar nav {
+  display: grid;
+  gap: 8px;
+}
+.admin-sidebar nav button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #203d60;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+}
+.admin-sidebar svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.admin-sidebar nav button:hover {
+  background: #ffffff70;
+  border-color: #ffffffb3;
+}
+.admin-sidebar nav button.active {
+  background: #163e87;
+  color: white;
+  border-color: #4274bf;
+  box-shadow: 0 4px 12px #163e8726;
+}
+.sidebar-collapsed .admin-sidebar-heading > span,
+.sidebar-collapsed .admin-sidebar nav button > span {
+  display: none;
+}
+.sidebar-collapsed .admin-sidebar-heading,
+.sidebar-collapsed .admin-sidebar nav button {
+  justify-content: center;
+}
+.admin-main .admin-stats {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  margin-bottom: 28px;
+}
+@media (max-width: 760px) {
+  .admin-workspace,
+  .admin-workspace.sidebar-collapsed {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .admin-sidebar {
+    position: static;
+  }
+  .sidebar-collapsed .admin-sidebar-heading > span {
+    display: block;
+  }
+  .sidebar-collapsed .admin-sidebar-heading {
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+  .sidebar-collapsed .admin-sidebar nav {
+    display: none;
+  }
+  .admin-sidebar nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .admin-sidebar nav {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

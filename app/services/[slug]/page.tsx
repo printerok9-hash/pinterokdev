@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Shell } from "@/components/site";
 import Intro from "@/components/intro";
-import ContactForm from "@/components/contact-form";
+import Calendly from "@/components/calendly";
 import { Notice } from "@/components/home";
 import { services, publicContent } from "@/lib/content";
 import { serviceDetails } from "@/lib/service-details";
@@ -60,10 +60,10 @@ export default async function Service({
           <section>
             <h2>What happens next?</h2>
             <p>
-              1. Contact us with your printer model, postcode and a description
-              of the issue.
+              1. Choose an available consultation time in Calendly and share
+              your printer model, postcode and the issue.
               <br />
-              2. We assess your request and confirm availability.
+              2. We discuss your request and arrange the next steps.
               <br />
               3. Your technician diagnoses the fault and discusses the repair
               options.
@@ -75,7 +75,7 @@ export default async function Service({
             Book {s.title.toLowerCase()} ↗
           </Link>
         </div>
-        <ContactForm />
+        <Calendly />
       </section>
       <div className="container notice-wrap">
         <Notice />

@@ -1,6 +1,7 @@
 import { Shell } from "@/components/site";
 import Intro from "@/components/intro";
 import ServiceExplorer from "@/components/service-explorer";
+import Calendly from "@/components/calendly";
 import { ServiceGrid, Notice, FAQ } from "@/components/home";
 export const metadata = {
   title: "Printer Repair & Maintenance Services UK",
@@ -19,6 +20,17 @@ export default function Services() {
         <ServiceGrid />
       </section>
       <ServiceExplorer />
+      <section className="section container booking-grid">
+        <div>
+          <span className="eyebrow">BOOK A CONSULTATION</span>
+          <h2>Find a time that suits you.</h2>
+          <p>
+            Choose an available time in Calendly to discuss your printer and the
+            service you need.
+          </p>
+        </div>
+        <Calendly />
+      </section>
       <section className="container notice-wrap">
         <Notice />
       </section>
