@@ -26,6 +26,7 @@ import {
   FiArrowUpRight,
   FiArrowRight,
   FiPhone,
+  FiPhoneIncoming,
   FiShield,
   FiClock,
   FiCheck,
@@ -49,6 +50,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Shell, whatsapp } from "./site";
 import { services, faqs, posts } from "@/lib/content";
 import ContactForm from "./contact-form";
+import PhoneText from "./phone-text";
 import ServiceExplorer from "./service-explorer";
 const serviceIcons = [FiPrinter, FiDroplet, FiLayers, FiMaximize];
 function Counter({ value, label }: { value: number; label: string }) {
@@ -157,7 +159,7 @@ export function FAQ() {
             {q}
             <FiChevronDown />
           </summary>
-          <p>{a}</p>
+          <p><PhoneText>{a}</PhoneText></p>
         </details>
       ))}
     </div>
@@ -634,6 +636,23 @@ export default function Home({
             <Counter value={3} label="Simple steps" />
           </div>
         </Reveal>
+      </section>
+      <section className="repair-call-banner" aria-labelledby="repair-call-heading">
+        <div className="container repair-call-inner">
+          <div className="repair-call-copy">
+            <h2 id="repair-call-heading">Facing your Printer Problem?</h2>
+            <p>Worry free to connect with us for best repair solution</p>
+          </div>
+          <div className="repair-call-contact">
+            <span className="repair-call-icon" aria-hidden="true">
+              <FiPhoneIncoming />
+            </span>
+            <div>
+              <a href="tel:+447441448082">+44 7441448082</a>
+              <p>Monday - Saturday : 9.00 am - 7.30 pm</p>
+            </div>
+          </div>
+        </div>
       </section>
       <section className="section navy-section">
         <div className="container">

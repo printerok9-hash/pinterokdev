@@ -7,6 +7,7 @@ import {
   FiMessageSquare,
 } from "react-icons/fi";
 import Link from "next/link";
+import PhoneText from "./phone-text";
 export default function ContactForm({
   booking = false,
 }: {
@@ -132,6 +133,18 @@ export default function ContactForm({
               </select>
             </label>
             <label>
+              Postcode
+              <input
+                name="postcode"
+                placeholder="e.g. SW1A 1AA"
+                autoComplete="postal-code"
+                autoCapitalize="characters"
+                minLength={2}
+                maxLength={12}
+                required
+              />
+            </label>
+            <label>
               Preferred date
               <input
                 type="date"
@@ -165,7 +178,7 @@ export default function ContactForm({
           </label>
           {state === "error" && (
             <p className="form-error" role="alert">
-              {message}
+              <PhoneText>{message}</PhoneText>
             </p>
           )}
           <button className="button form-submit" disabled={state === "sending"}>

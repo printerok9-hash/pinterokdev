@@ -57,7 +57,7 @@ export default function Privacy() {
               <br />
               Email: printerok9@gmail.com
               <br />
-              Phone: +44 7441448082
+              Phone: <a href="tel:+447441448082">+44 7441448082</a>
             </p>
           </section>
         </article>

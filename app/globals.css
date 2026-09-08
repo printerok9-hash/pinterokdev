@@ -1004,6 +1004,87 @@ h2 {
 .blog-copy .text-link {
   font-size: 11px;
 }
+.repair-call-banner {
+  margin-bottom: clamp(32px, 5vw, 64px);
+  background: #101d52;
+  color: #fff;
+}
+.repair-call-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-block: 48px;
+}
+.repair-call-copy h2,
+.repair-call-contact a {
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+.repair-call-banner p {
+  margin-top: 14px;
+  font-size: clamp(15px, 1.5vw, 20px);
+  line-height: 1.5;
+}
+.repair-call-contact {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-shrink: 0;
+}
+.repair-call-contact a {
+  display: inline-block;
+  white-space: nowrap;
+}
+.repair-call-contact a:hover {
+  color: #ffcc00;
+}
+.repair-call-icon {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  border: 1px dashed #ffcc00;
+  border-radius: 50%;
+  color: #ffcc00;
+}
+.repair-call-icon svg {
+  width: 54px;
+  height: 54px;
+  stroke-width: 1.6;
+}
+@media (max-width: 1000px) {
+  .repair-call-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+}
+@media (max-width: 480px) {
+  .repair-call-inner {
+    padding-block: 36px;
+  }
+  .repair-call-contact {
+    gap: 14px;
+  }
+  .repair-call-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .repair-call-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  .repair-call-contact a {
+    font-size: 24px;
+  }
+  .repair-call-contact p {
+    font-size: 13px;
+  }
+}
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.12fr;
