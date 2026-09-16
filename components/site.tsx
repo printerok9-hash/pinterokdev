@@ -96,6 +96,7 @@ export function Header() {
             {[
               ["Home", "/"],
               ["Services", "/services"],
+              ["Guides", "/guides"],
               ["About Us", "/about"],
               ["Blog", "/blog"],
               ["Contact", "/contact"],
@@ -166,6 +167,13 @@ export function Header() {
                         </li>
                       ))}
                     </ul>
+                    <Link
+                      className="services-overview"
+                      href="/locations"
+                      onClick={closeNavigation}
+                    >
+                      See areas we cover <FiArrowUpRight aria-hidden="true" />
+                    </Link>
                   </div>
                 </div>
               ) : (
@@ -241,6 +249,8 @@ export function Footer() {
           <div>
             <h4>Explore</h4>
             <Link href="/services">Our services</Link>
+            <Link href="/locations">Areas we cover</Link>
+            <Link href="/guides">Troubleshooting guides</Link>
             <Link href="/about">About Pinterok</Link>
             <Link href="/blog">Advice & insights</Link>
             <Link href="/book">Book a repair</Link>
@@ -268,6 +278,7 @@ export function Footer() {
             © {new Date().getFullYear()} Pinterok. All rights reserved.
           </span>
           <Link href="/privacy">Privacy policy</Link>
+          <Link href="/terms">Terms & conditions</Link>
           <span>Independent service. Dependable support.</span>
         </div>
       </footer>

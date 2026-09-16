@@ -25,6 +25,18 @@ export async function generateMetadata({
   return {
     title: s?.title || "Service not found",
     description: s?.description,
+    keywords: s
+      ? [
+          `${s.title.toLowerCase()} near me`,
+          `${s.title.toLowerCase()} UK`,
+          "printer repair near me",
+          "onsite printer repair",
+          "HP printer repair",
+          "Canon printer repair",
+          "Epson printer repair",
+          "Brother printer repair",
+        ]
+      : undefined,
   };
 }
 export default async function Service({
@@ -69,6 +81,17 @@ export default async function Service({
               options.
               <br />
               4. We carry out the agreed work and test the printer.
+            </p>
+          </section>
+          <section>
+            <h2>{s.title} near you</h2>
+            <p>
+              We arrange onsite visits for {s.title.toLowerCase()} across the
+              UK, including{" "}
+              <Link href="/locations">London, Manchester, Birmingham and other major cities</Link>
+              , plus remote support wherever you’re based. We work with HP,
+              Canon, Epson, Brother and most other major printer brands as an
+              independent provider.
             </p>
           </section>
           <Link href="/book" className="button">

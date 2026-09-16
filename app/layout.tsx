@@ -19,7 +19,19 @@ export const metadata: Metadata = {
     template: "%s | Pinterok",
   },
   description:
-    "Independent printer repair for UK homes and offices. Diagnostics, WiFi setup, maintenance and cartridge services. Call +44 7441448082.",
+    "Independent printer repair near you: onsite and remote printer engineer support, diagnostics, WiFi setup, maintenance and cartridge services across the UK. Call +44 7441448082.",
+  keywords: [
+    "printer repair near me",
+    "printer repairs near me",
+    "printer repair UK",
+    "printer repair service",
+    "local printer repair",
+    "printer engineer near me",
+    "printer technician near me",
+    "office printer repair",
+    "business printer repair",
+    "same day printer repair",
+  ],
   openGraph: {
     title: "Pinterok — Back to printing. Back to business.",
     description:

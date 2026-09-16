@@ -6,7 +6,20 @@ import { ServiceGrid, Notice, FAQ } from "@/components/home";
 export const metadata = {
   title: "Printer Repair & Maintenance Services UK",
   description:
-    "Independent printer repair, cartridge refilling, toner refills and scanner repairs for UK homes and businesses.",
+    "Independent printer repair near you: onsite and remote printer engineer support, cartridge refilling, toner refills and scanner repairs for UK homes and businesses.",
+  keywords: [
+    "printer repair service",
+    "onsite printer repair",
+    "office printer repair",
+    "commercial printer repair",
+    "laser printer repair",
+    "inkjet printer repair",
+    "multifunction printer repair",
+    "HP printer repair",
+    "Canon printer repair",
+    "Epson printer repair",
+    "Brother printer repair",
+  ],
 };
 export default function Services() {
   return (
@@ -14,7 +27,7 @@ export default function Services() {
       <Intro
         label="Our services"
         title="Every printer. Expert attention."
-        description="Complete printer repair, maintenance and installation services. Practical solutions, clear advice and care that comes to you."
+        description="Complete printer repair, maintenance and installation services — onsite or remote, near you and across the UK. Practical solutions, clear advice and care that comes to you."
       />
       <section className="section container">
         <ServiceGrid />
