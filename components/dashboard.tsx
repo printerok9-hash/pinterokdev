@@ -10,6 +10,7 @@ import {
   FiShield,
   FiCalendar,
   FiMessageSquare,
+  FiMessageCircle,
   FiFileText,
   FiTool,
   FiHelpCircle,
@@ -34,6 +35,7 @@ type RecordItem = {
   phone?: string;
   brand?: string;
   postcode?: string;
+  address?: string;
   problem?: string;
   preferredDate?: string;
   calendlyStartTime?: string;
@@ -57,6 +59,7 @@ const blank = {
 const tabs = [
   "appointments",
   "enquiries",
+  "chatbot",
   "posts",
   "services",
   "faqs",
@@ -65,6 +68,7 @@ const tabs = [
 const sectionIcons = [
   FiCalendar,
   FiMessageSquare,
+  FiMessageCircle,
   FiFileText,
   FiTool,
   FiHelpCircle,
@@ -73,6 +77,7 @@ const sectionIcons = [
 const sectionLabels = [
   "Appointments",
   "Customer messages",
+  "Chatbot leads",
   "Blog posts",
   "Services",
   "FAQs",
@@ -317,7 +322,8 @@ export default function Dashboard() {
         </form>
       </div>
     );
-  const lead = ["appointments", "enquiries"].includes(tab);
+  const lead = ["appointments", "enquiries", "chatbot"].includes(tab);
+  const chatbotTab = tab === "chatbot";
   return (
     <div className="admin-page">
       <div className="admin-top">
@@ -401,6 +407,7 @@ export default function Dashboard() {
               ["completed", "Completed repairs"],
               ["posts", "Blog posts"],
               ["messages", "Customer messages"],
+              ["chats", "Chatbot leads"],
             ].map(([key, label]) => (
               <div className="stat-card" key={key}>
                 <span>{label}</span>
@@ -456,9 +463,11 @@ export default function Dashboard() {
                       value={search}
                       maxLength={200}
                       placeholder={
-                        lead
-                          ? "Name, phone, email, postcode or printer issue…"
-                          : "Title, category or content…"
+                        chatbotTab
+                          ? "Name, phone, address or problem…"
+                          : lead
+                            ? "Name, phone, email, postcode or printer issue…"
+                            : "Title, category or content…"
                       }
                       onChange={(e) => setSearch(e.target.value)}
                     />
@@ -499,20 +508,22 @@ export default function Dashboard() {
                             ))}
                           </select>
                         </label>
-                        <label className="admin-field">
-                          Printer brand
-                          <select
-                            value={filters.brand}
-                            onChange={(e) =>
-                              updateFilter("brand", e.target.value)
-                            }
-                          >
-                            <option value="">All brands</option>
-                            {options.brands.map((value) => (
-                              <option key={value}>{value}</option>
-                            ))}
-                          </select>
-                        </label>
+                        {!chatbotTab && (
+                          <label className="admin-field">
+                            Printer brand
+                            <select
+                              value={filters.brand}
+                              onChange={(e) =>
+                                updateFilter("brand", e.target.value)
+                              }
+                            >
+                              <option value="">All brands</option>
+                              {options.brands.map((value) => (
+                                <option key={value}>{value}</option>
+                              ))}
+                            </select>
+                          </label>
+                        )}
                       </>
                     ) : (
                       <label className="admin-field">
@@ -556,15 +567,25 @@ export default function Dashboard() {
                 </h3>
                 {lead ? (
                   <>
-                    {(
-                      [
-                        ["name", "Customer name", "text", 100],
-                        ["email", "Email address", "email", 254],
-                        ["phone", "Phone number", "tel", 25],
-                        ["brand", "Printer brand", "text", 80],
-                        ["postcode", "Postcode", "text", 12],
-                        ["preferredDate", "Preferred date", "date", undefined],
-                      ] as const
+                    {(chatbotTab
+                      ? ([
+                          ["name", "Customer name", "text", 100],
+                          ["phone", "Phone number", "tel", 25],
+                          ["address", "Address", "text", 200],
+                        ] as const)
+                      : ([
+                          ["name", "Customer name", "text", 100],
+                          ["email", "Email address", "email", 254],
+                          ["phone", "Phone number", "tel", 25],
+                          ["brand", "Printer brand", "text", 80],
+                          ["postcode", "Postcode", "text", 12],
+                          [
+                            "preferredDate",
+                            "Preferred date",
+                            "date",
+                            undefined,
+                          ],
+                        ] as const)
                     ).map(([key, label, type, maxLength]) => (
                       <label className="admin-field" key={key}>
                         {label}
@@ -586,7 +607,7 @@ export default function Dashboard() {
                       </label>
                     ))}
                     <label className="admin-field">
-                      Printer problem
+                      {chatbotTab ? "Problem" : "Printer problem"}
                       <textarea
                         required
                         minLength={10}
@@ -830,21 +851,26 @@ export default function Dashboard() {
                           <strong>{lead ? item.name : item.title}</strong>
                           {lead ? (
                             <>
-                              <p>
-                                <span className="admin-data-label">Email</span>
-                                <a href={`mailto:${item.email}`}>
-                                  {item.email}
-                                </a>
-                              </p>
+                              {!chatbotTab && (
+                                <p>
+                                  <span className="admin-data-label">
+                                    Email
+                                  </span>
+                                  <a href={`mailto:${item.email}`}>
+                                    {item.email}
+                                  </a>
+                                </p>
+                              )}
                               <p>
                                 <span className="admin-data-label">Phone</span>
                                 <a href={`tel:${item.phone}`}>{item.phone}</a>
                               </p>
                               <p>
                                 <span className="admin-data-label">
-                                  Postcode
+                                  {chatbotTab ? "Address" : "Postcode"}
                                 </span>
-                                {item.postcode || "Not supplied"}
+                                {(chatbotTab ? item.address : item.postcode) ||
+                                  "Not supplied"}
                               </p>
                             </>
                           ) : (
@@ -857,22 +883,28 @@ export default function Dashboard() {
                         <td>
                           {lead ? (
                             <>
-                              <span className="admin-data-label">
-                                Printer brand
-                              </span>
-                              <strong>{item.brand}</strong>
+                              {!chatbotTab && (
+                                <>
+                                  <span className="admin-data-label">
+                                    Printer brand
+                                  </span>
+                                  <strong>{item.brand}</strong>
+                                </>
+                              )}
                               <p>
                                 <span className="admin-data-label">
                                   Problem
                                 </span>
                                 {item.problem}
                               </p>
-                              <p>
-                                <span className="admin-data-label">
-                                  Preferred date
-                                </span>
-                                {item.preferredDate || "Not specified"}
-                              </p>
+                              {!chatbotTab && (
+                                <p>
+                                  <span className="admin-data-label">
+                                    Preferred date
+                                  </span>
+                                  {item.preferredDate || "Not specified"}
+                                </p>
+                              )}
                               {item.calendlyStartTime && (
                                 <p>
                                   <span className="admin-data-label">

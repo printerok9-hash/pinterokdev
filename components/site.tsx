@@ -2,6 +2,7 @@
 import Link from "next/link";
 import SmoothScroll from "./smooth-scroll";
 import RepairCoupon from "./repair-coupon";
+import Chatbot from "./chatbot";
 import { useEffect, useRef, useState } from "react";
 import { services } from "@/lib/content";
 import { serviceDetails } from "@/lib/service-details";
@@ -277,6 +278,7 @@ export function Footer() {
       >
         <FaWhatsapp />
       </a>
+      <Chatbot />
     </>
   );
 }
