@@ -49,8 +49,9 @@ export default function About() {
           </p>
           <p>
             Services are provided exclusively to business and organisational
-            customers, including offices, shops, schools, warehouses, clinics
-            and hotels. We do not accept residential repair bookings.
+            customers: offices, SMEs, schools, healthcare organisations, retail
+            businesses, hotels, warehouses and professional services companies.
+            We do not accept residential repair bookings.
           </p>
           <p>
             From a shared office printer that will not connect to a copier with

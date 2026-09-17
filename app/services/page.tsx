@@ -2,9 +2,10 @@ import { Shell } from "@/components/site";
 import Intro from "@/components/intro";
 import ServiceExplorer from "@/components/service-explorer";
 import Calendly from "@/components/calendly";
+import BusinessOverview from "@/components/business-overview";
 import { ServiceGrid, Notice, FAQ } from "@/components/home";
 export const metadata = {
-  title: "Business Printer Repair & Maintenance UK",
+  title: "Business Printer Repair Services UK",
   description:
     "Independent office printer repair, commercial maintenance, cartridge services and scanner repairs exclusively for UK businesses and organisations.",
   keywords: [
@@ -26,9 +27,10 @@ export default function Services() {
     <Shell>
       <Intro
         label="Our services"
-        title="Office Printer Maintenance & Repair"
+        title="Business Printer Repair Services UK"
         description="Printer repair and maintenance exclusively for businesses and organisations. On-site diagnosis, servicing and maintenance plans, with coverage confirmed before booking."
       />
+      <BusinessOverview />
       <section className="section container">
         <ServiceGrid />
       </section>

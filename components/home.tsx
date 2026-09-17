@@ -52,6 +52,7 @@ import { services, faqs, posts } from "@/lib/content";
 import ContactForm from "./contact-form";
 import PhoneText from "./phone-text";
 import ServiceExplorer from "./service-explorer";
+import BusinessOverview from "./business-overview";
 const serviceIcons = [FiPrinter, FiDroplet, FiLayers, FiMaximize];
 function Counter({ value, label }: { value: number; label: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -268,9 +269,9 @@ export default function Home({
             <h1>
               Business printer
               <br />
-              repair <span>UK.</span>
+              repair services <span>UK.</span>
             </h1>
-            <h2>Office printer maintenance and repair.</h2>
+            <h2>Commercial Printer Maintenance</h2>
             <p>
               On-site printer diagnosis, repairs and maintenance to help reduce
               office downtime. Services are provided exclusively to business and
@@ -437,6 +438,7 @@ export default function Home({
           </Reveal>
         </div>
       </section>
+      <BusinessOverview />
       <ServiceExplorer />
       <section className="section container">
         <div className="section-heading">

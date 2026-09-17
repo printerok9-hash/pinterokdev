@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   ),
   title: {
-    default: "Pinterok | Business Printer Repair UK",
+    default: "Pinterok | Business Printer Repair Services UK",
     template: "%s | Pinterok",
   },
   description:
-    "Independent printer repair and maintenance exclusively for UK businesses and organisations. On-site diagnosis and office printer servicing. Check postcode availability.",
+    "Business printer repair services UK. Commercial printer maintenance and on-site printer engineers exclusively for offices, businesses and organisations.",
   keywords: [
     "business printer repair UK",
     "commercial printer repair",
