@@ -119,18 +119,17 @@ export default async function LocationPage({
               <FiMapPin aria-hidden="true" /> Coverage
             </span>
             <p>
-              Pinterok is a UK-wide independent printer repair and support
-              service. We don’t run a fixed local branch in {l.city}, but we
-              regularly arrange onsite printer engineer visits across {l.city}{" "}
-              and {l.region} by appointment, alongside remote support for
-              business printers, subject to suitability and availability.
+              Pinterok coordinates business printer repair with local service
+              support. Contact us about your premises in {l.city} or {l.region}
+              to check whether an onsite visit can be arranged. Coverage, timing
+              and parts availability are confirmed before booking.
             </p>
           </div>
           <section>
-            <h2>Printer engineers covering {l.city}</h2>
+            <h2>Check printer engineer availability in {l.city}</h2>
             <p>{l.localContext}</p>
             <p>
-              We also arrange appointments around {l.city} in areas including{" "}
+              You can enquire about appointments around {l.city} in areas including{" "}
               {l.nearbyAreas.join(", ")}. If you’re just outside these areas,
               get in touch anyway — coverage depends on your postcode and
               current technician availability, not a fixed boundary.

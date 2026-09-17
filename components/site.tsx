@@ -255,7 +255,8 @@ export function Footer() {
             <Link href="/book">Book a repair</Link>
           </div>
           <div>
-            <h4>Get in touch</h4>
+            <h4>UK service support</h4>
+            <Link href="/service-network">Our service network</Link>
             <a href="tel:+447441448082">{phone}</a>
             <a href="mailto:printerok9@gmail.com">printerok9@gmail.com</a>
             <span>Business customers only; coverage confirmed by postcode</span>

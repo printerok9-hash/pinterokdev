@@ -15,7 +15,7 @@ import {
 export const metadata = {
   title: "About Our Independent Printer Repair Service",
   description:
-    "Meet Pinterok, an independent printer repair service for businesses and organisations across the UK.",
+    "Pinterok coordinates business printer repair services for UK organisations with local service support. Coverage confirmed by postcode.",
 };
 export default function About() {
   return (
@@ -42,10 +42,11 @@ export default function About() {
             Printers a close second.
           </h2>
           <p>
-            Pinterok provides independent printer diagnostics, repair,
-            maintenance and setup for businesses and organisations across the
-            UK. We focus on finding the cause of a problem and helping you
-            choose a practical next step.
+            Pinterok coordinates business printer repair services for UK
+            organisations with local service support. Our UK service operation
+            includes customer visits for diagnostics, repair, maintenance and
+            setup, subject to postcode and appointment availability. We help
+            you understand the problem and choose a practical next step.
           </p>
           <p>
             Services are provided exclusively to business and organisational
@@ -61,7 +62,7 @@ export default function About() {
           <ul className="checklist">
             {[
               "Transparent advice and pricing",
-              "Convenient doorstep appointments",
+              "Onsite appointments subject to availability",
               "Repair options before replacement",
               "Support across major printer brands",
             ].map((t) => (
@@ -75,6 +76,15 @@ export default function About() {
             Let’s get you printing ↗
           </Link>
         </div>
+      </section>
+      <section className="section container">
+        <article className="article">
+          <h2>Local service support for UK organisations</h2>
+          <p>We check your business postcode, equipment and local availability
+            before arranging a customer visit. The service options, appointment
+            timing and proposed costs are confirmed before booking.</p>
+          <Link className="text-link" href="/service-network">How our service network works</Link>
+        </article>
       </section>
       <section className="section pale">
         <div className="container">

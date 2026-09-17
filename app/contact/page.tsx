@@ -18,7 +18,7 @@ export default function Contact() {
       />
       <section className="section container contact-grid">
         <div>
-          <span className="eyebrow">GET IN TOUCH WITH US</span>
+          <span className="eyebrow">UK SERVICE SUPPORT</span>
           <h2>
             Real help.
             <br />A conversation away.
@@ -30,14 +30,14 @@ export default function Contact() {
           <a className="contact-method" href="tel:+447441448082">
             <FiPhone />
             <span>
-              <small>PHONE</small>+44 7441448082
+              <small>UK SUPPORT PHONE</small>+44 7441448082
             </span>
             <FiArrowUpRight />
           </a>
           <a className="contact-method" href="mailto:printerok9@gmail.com">
             <FiMail />
             <span>
-              <small>EMAIL</small>printerok9@gmail.com
+              <small>SERVICE EMAIL</small>printerok9@gmail.com
             </span>
             <FiArrowUpRight />
           </a>

@@ -836,7 +836,7 @@ export default function Home({
             <div>
               <h3>Looking for printer repair near me?</h3>
               <p>
-                We arrange local printer support across the UK. Share your
+                We coordinate printer repair for UK businesses. Share your
                 postcode to check availability for your business premises.
               </p>
             </div>

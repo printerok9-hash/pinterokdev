@@ -29,11 +29,13 @@ export const metadata: Metadata = {
     "office printer repair",
     "business printer repair",
     "commercial printer servicing",
+    "office copier repair",
+    "printer engineer UK",
   ],
   openGraph: {
     title: "Pinterok — Back to printing. Back to business.",
     description:
-      "Professional printer repair for businesses and organisations across the UK.",
+      "Pinterok coordinates business printer repair services for UK organisations with local service support. Coverage confirmed by postcode.",
     locale: "en_GB",
     type: "website",
     images: ["/printer.jpg"],

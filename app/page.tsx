@@ -7,7 +7,7 @@ export default async function Page() {
     "@type": "ProfessionalService",
     name: "Pinterok",
     description:
-      "Independent printer repair for businesses and organisations across the UK.",
+      "Pinterok coordinates business printer repair services for UK organisations with local service support. Coverage confirmed by postcode.",
     telephone: "+447441448082",
     email: "printerok9@gmail.com",
     areaServed: { "@type": "Country", name: "United Kingdom" },

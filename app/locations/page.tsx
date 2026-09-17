@@ -15,10 +15,22 @@ export default function LocationsIndex() {
   return (
     <Shell>
       <Intro
-        label="Areas we cover"
-        title="Business printer repair: check your area"
+        label="UK service enquiries"
+        title="UK Business Printer Repair Coverage"
         description="Independent printer repair exclusively for businesses and organisations. Enquire about the areas below with your business postcode; we confirm coverage, engineer availability and timing before booking."
       />
+      <section className="section container">
+        <article className="article">
+          <h2>Check availability anywhere in the UK</h2>
+          <p>Businesses in England, Scotland, Wales and Northern Ireland can
+            enquire about service in any city, town or rural location. Onsite
+            coverage depends on your postcode, travel distance, technician
+            availability and parts, and is confirmed before booking.</p>
+          <p>The city pages below are starting points for enquiries. For any
+            other location, send your full business postcode and printer model.</p>
+          <Link className="text-link" href="/service-network">How our service network works</Link>
+        </article>
+      </section>
       <section className="section container blog-grid">
         {locations.map((l, i) => (
           <Link
