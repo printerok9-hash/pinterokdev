@@ -58,8 +58,8 @@ export default async function LocationPage({
       a: "Yes. We work with HP, Canon, Epson, Brother and most other major printer brands, subject to model and parts availability. We are an independent provider and not affiliated with any manufacturer.",
     },
     {
-      q: `Do you offer remote printer support if I'm in ${l.city}?`,
-      a: "Yes, many connectivity, driver and software issues can be diagnosed and fixed remotely with your permission, without waiting for an onsite visit.",
+      q: `Do you offer business printer connectivity assistance if I'm in ${l.city}?`,
+      a: "For business and organisational customers, we can assess printer connectivity and configuration issues remotely with permission from an authorised contact. Availability and suitability are confirmed before booking.",
     },
     {
       q: `Which areas around ${l.city} do you cover?`,
@@ -71,8 +71,8 @@ export default async function LocationPage({
     "@graph": [
       {
         "@type": "Service",
-        serviceType: "Printer repair and maintenance",
-        name: `Printer repair in ${l.city}`,
+        serviceType: "Business printer repair and maintenance",
+        name: `Business printer repair in ${l.city}`,
         description: l.metaDescription,
         areaServed: {
           "@type": "City",
@@ -107,7 +107,11 @@ export default async function LocationPage({
           ),
         }}
       />
-      <Intro label={`Printer repair · ${l.city}`} title={l.h1} description={l.intro} />
+      <Intro
+        label={`Printer repair · ${l.city}`}
+        title={l.h1}
+        description={l.intro}
+      />
       <section className="section container">
         <article className="article">
           <div className="quick-answer">
@@ -117,9 +121,9 @@ export default async function LocationPage({
             <p>
               Pinterok is a UK-wide independent printer repair and support
               service. We don’t run a fixed local branch in {l.city}, but we
-              regularly arrange onsite printer engineer visits across{" "}
-              {l.city} and {l.region} by appointment, alongside remote support
-              you can access immediately from anywhere.
+              regularly arrange onsite printer engineer visits across {l.city}{" "}
+              and {l.region} by appointment, alongside remote support for
+              business printers, subject to suitability and availability.
             </p>
           </div>
           <section>
@@ -135,13 +139,13 @@ export default async function LocationPage({
           <section>
             <h2>What printer problems can we help with in {l.city}?</h2>
             <p>
-              Whether your printer has gone offline, won’t connect to Wi-Fi,
-              has stopped printing, is producing poor-quality pages, keeps
-              jamming, or won’t recognise a new cartridge, we can help
-              remotely or arrange a visit. Our{" "}
-              <Link href="/guides">printer troubleshooting guides</Link>{" "}
-              cover the most common issues step by step if you’d like to try
-              a fix yourself first, including{" "}
+              Whether your printer has gone offline, won’t connect to Wi-Fi, has
+              stopped printing, is producing poor-quality pages, keeps jamming,
+              or won’t recognise a new cartridge, we can help remotely or
+              arrange a visit. Our{" "}
+              <Link href="/guides">printer troubleshooting guides</Link> cover
+              the most common issues step by step if you’d like to try a fix
+              yourself first, including{" "}
               <Link href="/guides/printer-offline">printer offline errors</Link>{" "}
               and{" "}
               <Link href="/guides/printer-not-connecting-to-wifi">
@@ -156,16 +160,16 @@ export default async function LocationPage({
               We work with {brands.slice(0, -1).join(", ")} and{" "}
               {brands[brands.length - 1]} printers, among others, subject to
               model and parts availability. Pinterok is an independent
-              third-party provider and is not authorised, affiliated,
-              endorsed or sponsored by any printer manufacturer.
+              third-party provider and is not authorised, affiliated, endorsed
+              or sponsored by any printer manufacturer.
             </p>
           </section>
           <section>
             <h2>Business and office printer support in {l.city}</h2>
             <p>
-              For offices and shared printers in {l.city}, we also offer
-              ongoing maintenance and toner supply plans, so faults are
-              caught early rather than causing repeat downtime. Read our{" "}
+              For offices and shared printers in {l.city}, we also offer ongoing
+              maintenance and toner supply plans, so faults are caught early
+              rather than causing repeat downtime. Read our{" "}
               <Link href="/guides/business-printer-support-uk">
                 business printer support guide
               </Link>{" "}

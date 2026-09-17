@@ -4,7 +4,7 @@ import ContactForm from "@/components/contact-form";
 import { FiPhone, FiMail, FiArrowUpRight } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 export const metadata = {
-  title: "Contact Pinterok | Book Printer Repair UK",
+  title: "Contact Pinterok | Business Printer Repair UK",
   description:
     "Call +44 7441448082, WhatsApp or email printerok9@gmail.com to arrange independent printer repair.",
 };
@@ -14,7 +14,7 @@ export default function Contact() {
       <Intro
         label="Contact"
         title="Printer trouble? Let’s talk."
-        description="Tell us what is happening with your printer. We will help you find the right next step."
+        description="Printer repair exclusively for businesses and organisations. Share your organisation, printer model and business postcode to check service availability."
       />
       <section className="section container contact-grid">
         <div>

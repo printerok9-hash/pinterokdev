@@ -74,7 +74,7 @@ export default function RepairCoupon() {
           <div className="coupon-message">
             <span className="coupon-label">PINTEROK · PRINTER CARE</span>
             <h2 role="status">
-              Best Printer Repair in UK at <strong>Best Price</strong>
+              Independent Printer Repair with <strong>Clear Pricing</strong>
             </h2>
             <Link
               href="/book"

@@ -4,9 +4,9 @@ import Calendly from "@/components/calendly";
 import { FiPhone, FiCheckCircle } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 export const metadata = {
-  title: "Book Your Printer Repair Appointment",
+  title: "Book a Business Printer Repair Visit",
   description:
-    "Request a convenient printer repair appointment with Pinterok. Doorstep printer service for UK homes and offices.",
+    "Request a business printer repair appointment with Pinterok. On-site business printer service for UK businesses and organisations.",
 };
 export default function Book() {
   return (
@@ -14,7 +14,7 @@ export default function Book() {
       <Intro
         label="Book a repair"
         title="Your next good print starts here."
-        description="Choose an available time in Calendly to discuss your printer repair."
+        description="Request printer repair for your business or organisation. We confirm postcode coverage, service suitability and availability before booking a visit."
       />
       <section className="section container booking-grid">
         <div>
@@ -25,13 +25,14 @@ export default function Book() {
             More getting things done.
           </h2>
           <p>
-            Choose an available time in Calendly and share your repair details.
-            Calendly will send your booking confirmation and appointment
-            details.
+            Choose a consultation time in Calendly and share your organisation,
+            business postcode and printer details. A consultation confirmation
+            does not confirm an engineer visit; we arrange that with you after
+            checking coverage and availability.
           </p>
           <ul className="checklist">
             {[
-              "Home and office appointments",
+              "Business premises appointments",
               "Clear pricing before repair",
               "All major printer brands supported",
             ].map((t) => (

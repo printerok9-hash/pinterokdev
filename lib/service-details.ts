@@ -4,11 +4,11 @@ export const serviceDetails = [
     slug: "printer-servicing",
     title: "Reliable repairs. Longer printer life.",
     description:
-      "Practical care for home and office printers, from an unexpected fault to a regular service.",
+      "Practical care for business and office printers, from an unexpected fault to a regular service.",
     image: "/image/printerrepair1.jpg",
     alt: "Technician servicing a printer at a workbench",
     points: [
-      ["On-site repairs", "Diagnosis and repairs at your home or workplace."],
+      ["On-site repairs", "Diagnosis and repairs at your business premises."],
       [
         "Preventative maintenance",
         "Regular check-ups to help prevent breakdowns.",
@@ -25,11 +25,11 @@ export const serviceDetails = [
     action: "Book printer servicing",
   },
   {
-    label: "Remote support",
+    label: "Business printer connectivity",
     slug: "remote-printer-support",
     title: "Printer trouble? Let’s connect.",
     description:
-      "Get help with software and connection issues without starting with an on-site visit. We’ll advise when a physical repair is needed.",
+      "Printer connection and configuration assistance exclusively for businesses and organisations. We’ll advise when an on-site diagnosis or physical repair is needed.",
     image: "/image/customer_care.jpg",
     alt: "Support adviser wearing a headset",
     points: [
@@ -39,7 +39,7 @@ export const serviceDetails = [
       ],
       [
         "WiFi and network setup",
-        "Help connecting your printer to your home or office network.",
+        "Help connecting your printer to your business network.",
       ],
       [
         "Driver and device setup",
@@ -50,7 +50,7 @@ export const serviceDetails = [
         "Any remote access is explained and agreed with you first.",
       ],
     ],
-    action: "Request remote support",
+    action: "Request business printer assistance",
   },
   {
     label: "Toner contracts",

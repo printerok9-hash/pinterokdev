@@ -59,6 +59,10 @@ export default async function Post({
       />
       <section className="section container">
         <article className="article">
+          <p>
+            Guidance for business and organisational printer users. Pinterok
+            provides independent repair services exclusively to these customers.
+          </p>
           {p.image && (
             <div className="article-image">
               <Image src={p.image} alt={p.title} fill sizes="800px" />

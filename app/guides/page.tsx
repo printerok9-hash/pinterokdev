@@ -6,9 +6,9 @@ import { Notice } from "@/components/home";
 import { guides } from "@/lib/guides";
 
 export const metadata = {
-  title: "Printer Troubleshooting Guide: Fix Common Printer Problems",
+  title: "Office Printer Care & Troubleshooting Guides",
   description:
-    "An independent, UK-focused printer troubleshooting guide covering offline errors, Wi-Fi problems, paper jams, print quality and more, topic by topic.",
+    "Independent guidance for UK business and organisational printer users covering offline errors, Wi-Fi problems, paper jams, print quality and more, topic by topic.",
 };
 
 const generalFaqs = [
@@ -63,8 +63,8 @@ export default function GuidesIndex() {
             <p>
               Most printer problems fall into a handful of categories:
               connectivity (offline or Wi-Fi), print quality, paper handling,
-              driver or software issues, and ink or toner recognition. Find
-              the topic below that matches what you’re seeing for a direct,
+              driver or software issues, and ink or toner recognition. Find the
+              topic below that matches what you’re seeing for a direct,
               step-by-step fix.
             </p>
           </div>

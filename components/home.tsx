@@ -68,7 +68,11 @@ function Counter({ value, label }: { value: number; label: string }) {
     return () => controls.stop();
   }, [visible, value, count, reduced]);
   return (
-    <div ref={ref} className="scope-counter" aria-label={`${value} plus ${label}`}>
+    <div
+      ref={ref}
+      className="scope-counter"
+      aria-label={`${value} plus ${label}`}
+    >
       <motion.strong aria-hidden="true">{rounded}</motion.strong>
       <span>{label}</span>
     </div>
@@ -121,7 +125,7 @@ export function ServiceGrid() {
               <FiArrowUpRight />
             </span>
             {/* <span className="card-kicker">
-              {s.label || "EXPERT PRINTER SUPPORT"}
+              {s.label || "BUSINESS PRINTER REPAIR"}
             </span> */}
             <h3>{s.title}</h3>
             <p>{s.description}</p>
@@ -159,7 +163,9 @@ export function FAQ() {
             {q}
             <FiChevronDown />
           </summary>
-          <p><PhoneText>{a}</PhoneText></p>
+          <p>
+            <PhoneText>{a}</PhoneText>
+          </p>
         </details>
       ))}
     </div>
@@ -260,21 +266,20 @@ export default function Home({
               <span className="green-dot" /> EXPERT REPAIRS. RIGHT AT YOUR DOOR.
             </div>
             <h1>
-              Back to printing.
+              Business printer
               <br />
-              Back to <span>business.</span>
+              repair <span>UK.</span>
             </h1>
-            <h2>Professional printer repair across the UK.</h2>
+            <h2>Office printer maintenance and repair.</h2>
             <p>
-              Printer problems shouldn’t slow you down. Get fast,
-              <br className="desktop-break" /> reliable repairs for your home or
-              office — without
-              <br className="desktop-break" /> the hassle of leaving your
-              doorstep.
+              On-site printer diagnosis, repairs and maintenance to help reduce
+              office downtime. Services are provided exclusively to business and
+              organisational customers. Share your postcode to check
+              availability.
             </p>
             <div className="hero-buttons">
               <Link href="/book" className="button">
-                Book a printer repair <FiArrowUpRight />
+                Book a business repair <FiArrowUpRight />
               </Link>
               <a href="tel:+447441448082" className="button outline">
                 <FiPhone /> +44 7441448082
@@ -321,12 +326,12 @@ export default function Home({
                   A little expertise.
                   <br />A lot less downtime.
                 </strong>
-                <span>HOME & OFFICE PRINTER SPECIALISTS</span>
+                <span>BUSINESS PRINTER REPAIR SPECIALISTS</span>
               </div>
               <FiCheckCircle className="blue-check" />
             </div>
             {/* <div className="visual-caption">
-              <span>HOME & OFFICE PRINTER SPECIALISTS</span>
+              <span>BUSINESS PRINTER REPAIR SPECIALISTS</span>
               <span>01 / 03</span>
             </div> */}
           </Reveal>
@@ -338,7 +343,7 @@ export default function Home({
             [FiClock, "Same-day appointments", "Subject to local availability"],
             [FiTool, "Experienced technicians", "Care for every component"],
             [FiShield, "Honest, upfront advice", "No unnecessary replacements"],
-            [FiHome, "We come to you", "Home & office service"],
+            [FiHome, "We come to you", "Business premises visits"],
           ].map(([Icon, title, desc]) => {
             const I = Icon as typeof FiClock;
             return (
@@ -383,11 +388,7 @@ export default function Home({
                   "Lexmark",
                   "Zebronics",
                 ].map((brand) => (
-                  <span
-                    role="listitem"
-                    key={brand}
-                    className={`brand brand-${brand.toLowerCase()}`}
-                  >
+                  <span role="listitem" key={brand} className="brand">
                     {brand}
                   </span>
                 ))}
@@ -403,10 +404,11 @@ export default function Home({
         >
           {brandsPaused ? "Resume brand scrolling" : "Pause brand scrolling"}
         </button> */}
-        {/* <p>
-          Also supporting Kyocera, Lexmark & Zebronics. Independent repair
-          services. No manufacturer affiliation.
-        </p> */}
+        <p>
+          Independent business printer repair. Brand names identify the printers
+          we service; Pinterok is not affiliated with or authorised by these
+          manufacturers.
+        </p>
       </section>
       <section className="section pale" id="services">
         <div className="container">
@@ -484,7 +486,7 @@ export default function Home({
               "55% 50%",
             ],
             [
-              "Home & office printer solutions",
+              "Business printer repair and maintenance",
               "Complete printer installation, repair and maintenance. A reliable partner for your working day.",
               "/image/printerrepair2.jpg",
               "Close-up of a technician carefully repairing a printer mechanism",
@@ -606,9 +608,9 @@ export default function Home({
             In capable hands.
           </h2>
           <p>
-            Professional home service printer repair that fits around your day.
-            Our technicians provide doorstep support for homes and offices, with
-            practical advice you can understand.
+            On-site business printer repair planned around your working day. Our
+            technicians provide doorstep support for businesses and
+            organisations, with practical advice you can understand.
           </p>
           <p>
             We diagnose problems quickly and recommend a sensible solution —
@@ -618,7 +620,7 @@ export default function Home({
             {[
               "Care for inkjet, laser & multifunction printers",
               "Clear diagnosis and pricing before repairs",
-              "Convenient home and office appointments",
+              "Convenient business premises appointments",
               "Support that puts your needs first",
             ].map((x) => (
               <li key={x}>
@@ -637,7 +639,10 @@ export default function Home({
           </div>
         </Reveal>
       </section>
-      <section className="repair-call-banner" aria-labelledby="repair-call-heading">
+      <section
+        className="repair-call-banner"
+        aria-labelledby="repair-call-heading"
+      >
         <div className="container repair-call-inner">
           <div className="repair-call-copy">
             <h2 id="repair-call-heading">Facing your Printer Problem?</h2>
@@ -830,7 +835,7 @@ export default function Home({
               <h3>Looking for printer repair near me?</h3>
               <p>
                 We arrange local printer support across the UK. Share your
-                postcode to check availability for your home or office.
+                postcode to check availability for your business premises.
               </p>
             </div>
           </div>

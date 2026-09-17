@@ -5,9 +5,9 @@ import { Shell } from "@/components/site";
 import Intro from "@/components/intro";
 import { posts, publicContent } from "@/lib/content";
 export const metadata = {
-  title: "Printer Advice & Troubleshooting Blog",
+  title: "Business Printer Care & Advice",
   description:
-    "Practical printer advice from Pinterok. Troubleshoot offline printers, printing problems and error messages.",
+    "Practical office printer care from Pinterok, an independent repair provider exclusively for businesses and organisations.",
 };
 export default async function Blog() {
   const custom = await publicContent("posts");
@@ -17,7 +17,7 @@ export default async function Blog() {
       <Intro
         label="The print room"
         title="A little know-how goes a long way."
-        description="Practical advice, troubleshooting tips and a clearer understanding of the printer you use every day."
+        description="Practical printer care for businesses and organisations. Guidance for the office printers and shared devices your team uses every day."
       />
       <section className="section container blog-grid">
         {all.map((p, i) => (

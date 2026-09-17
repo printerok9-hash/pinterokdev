@@ -81,7 +81,7 @@ type Message = { from: "bot" | "user"; text: string };
 const initialMessages: Message[] = [
   {
     from: "bot",
-    text: "Hi, I'm the Pinterok assistant. Tell me what's going on with your printer and I'll pass it straight to our team.",
+    text: "Hi, I'm the Pinterok business repair assistant. We serve businesses and organisations exclusively and do not accept residential repair bookings. Tell me your organisation and what's going on with its printer, and I'll pass the details to our team.",
   },
 ];
 
@@ -236,10 +236,15 @@ export default function Chatbot() {
             className="chatbot-panel"
             role="dialog"
             aria-label="Pinterok chat assistant"
-            initial={reduced ? { opacity: 0 } : { opacity: 0, y: 20, scale: 0.97 }}
+            initial={
+              reduced ? { opacity: 0 } : { opacity: 0, y: 20, scale: 0.97 }
+            }
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: reduced ? 0 : 12 }}
-            transition={{ duration: reduced ? 0 : 0.25, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: reduced ? 0 : 0.25,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             <div className="chatbot-header">
               <span>

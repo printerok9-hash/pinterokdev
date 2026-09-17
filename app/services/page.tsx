@@ -4,9 +4,9 @@ import ServiceExplorer from "@/components/service-explorer";
 import Calendly from "@/components/calendly";
 import { ServiceGrid, Notice, FAQ } from "@/components/home";
 export const metadata = {
-  title: "Printer Repair & Maintenance Services UK",
+  title: "Business Printer Repair & Maintenance UK",
   description:
-    "Independent printer repair near you: onsite and remote printer engineer support, cartridge refilling, toner refills and scanner repairs for UK homes and businesses.",
+    "Independent office printer repair, commercial maintenance, cartridge services and scanner repairs exclusively for UK businesses and organisations.",
   keywords: [
     "printer repair service",
     "onsite printer repair",
@@ -26,8 +26,8 @@ export default function Services() {
     <Shell>
       <Intro
         label="Our services"
-        title="Every printer. Expert attention."
-        description="Complete printer repair, maintenance and installation services — onsite or remote, near you and across the UK. Practical solutions, clear advice and care that comes to you."
+        title="Office Printer Maintenance & Repair"
+        description="Printer repair and maintenance exclusively for businesses and organisations. On-site diagnosis, servicing and maintenance plans, with coverage confirmed before booking."
       />
       <section className="section container">
         <ServiceGrid />

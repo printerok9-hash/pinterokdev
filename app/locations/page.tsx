@@ -6,9 +6,9 @@ import { Notice } from "@/components/home";
 import { locations } from "@/lib/locations";
 
 export const metadata = {
-  title: "Printer Repair Near Me: Areas We Cover Across the UK",
+  title: "Business Printer Repair: Check UK Service Areas",
   description:
-    "Independent printer repair near you. Onsite visits arranged in London, Manchester, Birmingham, Leeds, Liverpool, Glasgow, Bristol, Sheffield, Nottingham and beyond.",
+    "Business printer repair enquiries in UK service areas. Share your business postcode to confirm local engineer availability before booking.",
 };
 
 export default function LocationsIndex() {
@@ -16,8 +16,8 @@ export default function LocationsIndex() {
     <Shell>
       <Intro
         label="Areas we cover"
-        title="Printer repair near you, across the UK"
-        description="Pinterok is a UK-wide independent printer repair and support service. We arrange onsite engineer visits around these cities and the surrounding areas, alongside remote support available immediately from anywhere."
+        title="Business printer repair: check your area"
+        description="Independent printer repair exclusively for businesses and organisations. Enquire about the areas below with your business postcode; we confirm coverage, engineer availability and timing before booking."
       />
       <section className="section container blog-grid">
         {locations.map((l, i) => (

@@ -56,13 +56,15 @@ export const guides: Guide[] = [
         body: "Wireless printers are usually configured with a dynamic IP address that your router can change from time to time. If your printer worked fine yesterday and is offline today with no other changes, this is one of the most common causes. Removing the printer from your computer and re-adding it (letting the operating system rediscover it fresh) usually resolves this, as does giving the printer a fixed (static) IP address or DHCP reservation in your router settings if you're comfortable doing so.",
       },
       {
-        heading: "Should I restart the printer, the router, or the computer first?",
+        heading:
+          "Should I restart the printer, the router, or the computer first?",
         answer:
           "Restart in this order for the best chance of an immediate fix: printer first, then router, then computer. Give each one at least 30 seconds fully powered off before switching back on.",
         body: "Turn the printer off at its own power switch (not just standby), wait 30 seconds, and turn it back on. Do the same with your router if the printer is wireless. Finally, restart the computer you're printing from. This clears temporary memory on all three devices and forces a completely fresh connection, which resolves the majority of offline errors that a simple retry doesn't.",
       },
       {
-        heading: "What if the printer still shows offline after restarting everything?",
+        heading:
+          "What if the printer still shows offline after restarting everything?",
         answer:
           "Remove the printer from your computer entirely and add it again from scratch, making sure you select the correct connection type (Wi-Fi, USB or network) rather than reusing an old saved entry.",
         body: "Old printer entries can carry over a broken driver or an out-of-date address even after a restart. Delete the printer from your list of devices, then use your operating system's “Add printer or scanner” option to find it again. If it still won't reconnect, the fault may sit with the printer's own network card, an outdated driver, or a hardware issue, and that's a good point to get an independent technician to take a look.",
@@ -90,8 +92,15 @@ export const guides: Guide[] = [
         a: "This points to a local software issue on that specific computer, such as an outdated driver or a stuck print queue, rather than a problem with the printer itself, since other devices can still reach it normally.",
       },
     ],
-    related: ["printer-not-connecting-to-wifi", "printer-not-printing", "printer-driver-problems"],
-    relatedService: { slug: "remote-printer-support", label: "Remote printer support" },
+    related: [
+      "printer-not-connecting-to-wifi",
+      "printer-not-printing",
+      "printer-driver-problems",
+    ],
+    relatedService: {
+      slug: "remote-printer-support",
+      label: "Remote printer support",
+    },
   },
   {
     slug: "printer-not-connecting-to-wifi",
@@ -163,11 +172,18 @@ export const guides: Guide[] = [
       },
       {
         q: "Do all printers support 5GHz Wi-Fi?",
-        a: "No. Many home and small-office printers only support the older 2.4GHz band, which has better range but is more congested. Check your printer's specification if it can't see your 5GHz network.",
+        a: "No. Some small-office printers only support the older 2.4GHz band, which has better range but is more congested. Check your printer's specification if it can't see your 5GHz network.",
       },
     ],
-    related: ["printer-offline", "how-to-set-up-a-wireless-printer", "printer-not-printing"],
-    relatedService: { slug: "remote-printer-support", label: "Remote printer support" },
+    related: [
+      "printer-offline",
+      "how-to-set-up-a-wireless-printer",
+      "printer-not-printing",
+    ],
+    relatedService: {
+      slug: "remote-printer-support",
+      label: "Remote printer support",
+    },
   },
   {
     slug: "printer-not-printing",
@@ -242,8 +258,15 @@ export const guides: Guide[] = [
         a: "It's a reasonable step if restarting the spooler and clearing the queue haven't worked. Uninstall the printer from your device list first, then download and install the current driver from the manufacturer's official support page for your exact model.",
       },
     ],
-    related: ["printer-offline", "printer-driver-problems", "printer-paper-jam"],
-    relatedService: { slug: "remote-printer-support", label: "Remote printer support" },
+    related: [
+      "printer-offline",
+      "printer-driver-problems",
+      "printer-paper-jam",
+    ],
+    relatedService: {
+      slug: "remote-printer-support",
+      label: "Remote printer support",
+    },
   },
   {
     slug: "poor-print-quality",
@@ -318,7 +341,11 @@ export const guides: Guide[] = [
         a: "Incorrect colours usually mean a low or empty colour cartridge, an outdated driver, or a colour profile mismatch in your print settings. Try a nozzle check first, then confirm your driver is up to date.",
       },
     ],
-    related: ["printer-not-recognising-ink-cartridge", "printer-paper-jam", "printer-troubleshooting-guide"],
+    related: [
+      "printer-not-recognising-ink-cartridge",
+      "printer-paper-jam",
+      "printer-troubleshooting-guide",
+    ],
     relatedService: { slug: "printer-servicing", label: "Printer servicing" },
   },
   {
@@ -342,7 +369,8 @@ export const guides: Guide[] = [
       "Clear a paper jam by gently pulling stuck paper in the direction it normally travels through the printer, never backwards, and always check for small torn fragments left behind. Jams that keep recurring are usually caused by overfilled trays, worn feed rollers, damp or damaged paper, or paper loaded incorrectly against the tray guides.",
     sections: [
       {
-        heading: "How do I safely clear a paper jam without damaging the printer?",
+        heading:
+          "How do I safely clear a paper jam without damaging the printer?",
         answer:
           "Always pull jammed paper slowly in the same direction it was already travelling through the printer, using both hands to keep it flat and avoid tearing it.",
         body: "Turn the printer off first for safety, then open every access point the manufacturer provides (rear panel, top cover, tray) rather than forcing paper out through just one opening. Check carefully for small torn corners left behind, since even a tiny fragment left in the paper path will cause the next jam. Never use sharp tools to remove paper, as this can damage internal rollers or sensors.",
@@ -394,7 +422,11 @@ export const guides: Guide[] = [
         a: "A single jam cleared carefully rarely causes lasting damage. Repeated jams pulled out roughly, or torn fragments left inside, can damage rollers or sensors over time, which is why gentle, careful removal matters.",
       },
     ],
-    related: ["poor-print-quality", "printer-not-printing", "printer-troubleshooting-guide"],
+    related: [
+      "poor-print-quality",
+      "printer-not-printing",
+      "printer-troubleshooting-guide",
+    ],
     relatedService: { slug: "printer-servicing", label: "Printer servicing" },
   },
   {
@@ -402,7 +434,7 @@ export const guides: Guide[] = [
     cluster: "Printer setup",
     seoTitle: "How to Set Up a Wireless Printer (Windows and Mac)",
     metaDescription:
-      "A clear, independent step-by-step guide to setting up a wireless printer on Windows or Mac and adding it to your laptop, desktop or home network.",
+      "A clear, independent step-by-step guide to setting up a wireless printer on Windows or Mac and adding it to your laptop, desktop or business network.",
     primaryKeyword: "how to set up a wireless printer",
     secondaryKeywords: [
       "connect printer to laptop",
@@ -470,8 +502,15 @@ export const guides: Guide[] = [
         a: "Yes, as long as each computer is on the same Wi-Fi network, you can add the same wireless printer separately on each one using the same setup process.",
       },
     ],
-    related: ["printer-not-connecting-to-wifi", "printer-driver-problems", "printer-offline"],
-    relatedService: { slug: "remote-printer-support", label: "Remote printer support" },
+    related: [
+      "printer-not-connecting-to-wifi",
+      "printer-driver-problems",
+      "printer-offline",
+    ],
+    relatedService: {
+      slug: "remote-printer-support",
+      label: "Remote printer support",
+    },
   },
   {
     slug: "printer-driver-problems",
@@ -546,8 +585,15 @@ export const guides: Guide[] = [
         a: "Often not — macOS includes built-in support for many printer brands and installs the correct driver automatically when you add the printer. Manual installation is mainly needed for less common or older printer models.",
       },
     ],
-    related: ["printer-not-printing", "how-to-set-up-a-wireless-printer", "printer-offline"],
-    relatedService: { slug: "remote-printer-support", label: "Remote printer support" },
+    related: [
+      "printer-not-printing",
+      "how-to-set-up-a-wireless-printer",
+      "printer-offline",
+    ],
+    relatedService: {
+      slug: "remote-printer-support",
+      label: "Remote printer support",
+    },
   },
   {
     slug: "printer-not-recognising-ink-cartridge",
@@ -582,7 +628,8 @@ export const guides: Guide[] = [
         body: "Remove the cartridge and gently wipe the contact strip with a dry, lint-free cloth (never a wet one, and never touch the contacts with bare fingers if avoidable). Reinsert the cartridge firmly until you feel or hear it click into place, and close the access door completely, since some printers won't read a cartridge until the door is fully shut.",
       },
       {
-        heading: "Why does my printer show a low-ink warning right after I replaced the cartridge?",
+        heading:
+          "Why does my printer show a low-ink warning right after I replaced the cartridge?",
         answer:
           "This is usually a false reading caused by the printer not yet re-reading the new cartridge's chip, rather than the new cartridge genuinely being low.",
         body: "Remove and reinsert the cartridge to force a fresh read, and check the printer's own menu for an option to reset or confirm ink levels after a cartridge change. If the warning persists across a printer restart, and you're confident the cartridge is genuinely new and correctly seated, the printer's chip reader may need attention.",
@@ -594,7 +641,8 @@ export const guides: Guide[] = [
         body: "Double-check the cartridge part number against your printer's exact model number, including any regional variant. Compatible (non-original) cartridges can also occasionally have chip compatibility issues with certain printer firmware versions; if a compatible cartridge is rejected, try a genuine cartridge to confirm whether the cartridge or the printer is at fault.",
       },
       {
-        heading: "What if a genuine, correctly seated cartridge still isn't recognised?",
+        heading:
+          "What if a genuine, correctly seated cartridge still isn't recognised?",
         answer:
           "If you've confirmed the cartridge is correct, properly seated, and the contacts are clean, but the printer still won't recognise it, the fault is likely with the printer's own contact pins or chip reader rather than the cartridge.",
         body: "This is a hardware-level issue inside the printer itself and is a sensible point to get an independent technician to check the cartridge bay and contact pins, rather than continuing to buy replacement cartridges that are unlikely to solve it.",
@@ -622,8 +670,15 @@ export const guides: Guide[] = [
         a: "A cartridge that simply isn't recognised won't damage the printer. Forcing a cartridge that doesn't fit correctly, or ignoring repeated errors and continuing to print, can occasionally strain the cartridge bay mechanism over time.",
       },
     ],
-    related: ["poor-print-quality", "printer-not-printing", "business-printer-support-uk"],
-    relatedService: { slug: "toner-contracts", label: "Toner and cartridge supply" },
+    related: [
+      "poor-print-quality",
+      "printer-not-printing",
+      "business-printer-support-uk",
+    ],
+    relatedService: {
+      slug: "toner-contracts",
+      label: "Toner and cartridge supply",
+    },
   },
   {
     slug: "business-printer-support-uk",
@@ -641,15 +696,16 @@ export const guides: Guide[] = [
     ],
     h1: "Business and office printer support: keeping your team printing",
     intro:
-      "Office printers face heavier daily use than home devices, so small issues turn into repeated downtime faster. Here's how to keep shared and multifunction printers running reliably.",
+      "Office printers face heavier daily use than lightly used devices, so small issues turn into repeated downtime faster. Here's how to keep shared and multifunction printers running reliably.",
     quickAnswer:
       "Business printer downtime is usually caused by heavy shared usage wearing feed rollers and drums faster than expected, print queues backing up across multiple users, and toner or parts running out without anyone tracking usage. A basic maintenance routine and a clear point of contact for faults reduces most repeat disruption.",
     sections: [
       {
-        heading: "Why do office printers break down more often than home printers?",
+        heading:
+          "Why do office printers break down more often than lightly used printers?",
         answer:
-          "Shared office printers handle a far higher page volume per week than a home device, so parts rated for a certain page count — rollers, drums, fusers — wear out proportionally faster and need replacing on a schedule rather than only when they fail.",
-        body: "A device used by one person at home might print a few hundred pages a month, while a shared office printer can handle that many pages in a single day. Planning for scheduled servicing and consumable replacement, rather than waiting for a breakdown, is the main difference between managing a business printer well and managing a home one.",
+          "Shared office printers handle a far higher page volume per week than a lightly used device, so parts rated for a certain page count — rollers, drums, fusers — wear out proportionally faster and need replacing on a schedule rather than only when they fail.",
+        body: "A device used by one person in a small office might print a few hundred pages a month, while a shared office printer can handle that many pages in a single day. Planning for scheduled servicing and consumable replacement, rather than waiting for a breakdown, is the main difference between managing a business printer well and managing a lightly used one.",
       },
       {
         heading: "How do I stop print queues backing up with multiple users?",
@@ -658,7 +714,8 @@ export const guides: Guide[] = [
         body: "Make sure whoever manages your office network knows how to access and clear the shared print queue, and consider print management software for larger teams, which can track jobs, users, and costs, and often flags stuck jobs automatically rather than leaving the whole team unable to print.",
       },
       {
-        heading: "How can we track toner and consumable usage across the office?",
+        heading:
+          "How can we track toner and consumable usage across the office?",
         answer:
           "Most business-grade printers report toner, drum and maintenance kit levels through their built-in web interface or management software, which is worth checking regularly rather than waiting for a low-ink warning during a busy period.",
         body: "If your printer supports it, set up email or dashboard alerts for low consumables so replacements can be ordered before they run out completely. For offices managing several printers, a toner supply and maintenance plan removes the need to track this manually per device.",
@@ -670,7 +727,8 @@ export const guides: Guide[] = [
         body: "A simple internal cleaning cycle run monthly, alongside keeping paper stored correctly and not overfilled in trays, prevents a large share of avoidable faults. For higher-volume offices, a scheduled service visit every few months catches wear before it causes a breakdown during business hours.",
       },
       {
-        heading: "When should an office printer issue go to a technician rather than IT?",
+        heading:
+          "When should an office printer issue go to a technician rather than IT?",
         answer:
           "IT teams can usually resolve driver, network, and print queue issues, but mechanical problems — paper feed faults, worn drums, print head issues, or unusual noises — need a printer technician rather than software troubleshooting.",
         body: "If a fault returns repeatedly despite clearing queues and restarting devices, or involves a physical noise, smell, or visible damage, that's the point to bring in independent printer repair support rather than continuing to work around it, which usually costs more in lost time than an early repair would.",
@@ -698,8 +756,15 @@ export const guides: Guide[] = [
         a: "Both can work well, but compatibility varies by printer model and firmware. An independent supplier can advise on which compatible options are reliable for your specific printer, alongside genuine options.",
       },
     ],
-    related: ["printer-not-recognising-ink-cartridge", "printer-paper-jam", "printer-troubleshooting-guide"],
-    relatedService: { slug: "copier-maintenance", label: "Copier and office maintenance" },
+    related: [
+      "printer-not-recognising-ink-cartridge",
+      "printer-paper-jam",
+      "printer-troubleshooting-guide",
+    ],
+    relatedService: {
+      slug: "copier-maintenance",
+      label: "Copier and office maintenance",
+    },
   },
 ];
 

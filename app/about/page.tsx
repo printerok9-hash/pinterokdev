@@ -15,7 +15,7 @@ import {
 export const metadata = {
   title: "About Our Independent Printer Repair Service",
   description:
-    "Meet Pinterok, an independent printer repair service for homes and offices across the UK.",
+    "Meet Pinterok, an independent printer repair service for businesses and organisations across the UK.",
 };
 export default function About() {
   return (
@@ -43,12 +43,17 @@ export default function About() {
           </h2>
           <p>
             Pinterok provides independent printer diagnostics, repair,
-            maintenance and setup for homes and offices across the UK. We focus
-            on finding the cause of a problem and helping you choose a practical
-            next step.
+            maintenance and setup for businesses and organisations across the
+            UK. We focus on finding the cause of a problem and helping you
+            choose a practical next step.
           </p>
           <p>
-            From a home printer that will not connect to an office machine with
+            Services are provided exclusively to business and organisational
+            customers, including offices, shops, schools, warehouses, clinics
+            and hotels. We do not accept residential repair bookings.
+          </p>
+          <p>
+            From a shared office printer that will not connect to a copier with
             a persistent paper jam, our approach is the same: listen, explain
             and take care.
           </p>
@@ -101,7 +106,7 @@ export default function About() {
               [
                 FaHouse,
                 "Service at your doorstep",
-                "Professional printer support for your home or office.",
+                "Professional printer support for your business premises.",
               ],
               [
                 FaPrinter,

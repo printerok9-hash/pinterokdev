@@ -99,11 +99,12 @@ export default async function GuidePage({
             </div>
           </section>
           <section>
-            <h2>Still stuck?</h2>
+            <h2>Need a business printer repair?</h2>
             <p>
-              If these steps haven’t fixed it, our independent printer
-              technicians can take it from here. Tell us your printer model
-              and what you’ve already tried.
+              Our independent printer technicians serve businesses and
+              organisations exclusively. Share your organisation, business
+              postcode, printer model and what you have already tried so we can
+              assess the next step.
             </p>
             <div className="guide-cta-actions">
               <Link className="button" href="/book">
@@ -133,7 +134,8 @@ export default async function GuidePage({
                 ))}
                 <li>
                   <Link href={`/services/${g.relatedService.slug}`}>
-                    {g.relatedService.label} <FiArrowUpRight aria-hidden="true" />
+                    {g.relatedService.label}{" "}
+                    <FiArrowUpRight aria-hidden="true" />
                   </Link>
                 </li>
               </ul>

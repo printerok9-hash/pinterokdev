@@ -172,7 +172,8 @@ export default function ContactForm({
           <label className="consent">
             <input type="checkbox" name="consent" value="true" required />
             <span>
-              I agree to be contacted about this request. Read our{" "}
+              I am enquiring on behalf of a business or organisation and agree
+              to be contacted about this request. Read our{" "}
               <Link href="/privacy">privacy policy</Link>.
             </span>
           </label>

@@ -83,7 +83,7 @@ export function Header() {
             <span className="green-dot" /> Your printer. Our expertise.
           </span>
           <span>
-            <FiMapPin /> Serving homes & businesses across the UK{" "}
+            <FiMapPin /> Printer repair for UK businesses & organisations{" "}
             <span className="top-divider">|</span> Independent printer
             specialists
           </span>
@@ -238,9 +238,8 @@ export function Footer() {
           <div>
             <Logo />
             <p>
-              Expert care for your printer.
-              <br />
-              Less downtime for your day.
+              Services are provided exclusively to business and organisational
+              customers. We do not accept residential repair bookings.
             </p>
             <a href={whatsapp} className="text-link">
               <FaWhatsapp /> Let’s talk on WhatsApp
@@ -259,7 +258,7 @@ export function Footer() {
             <h4>Get in touch</h4>
             <a href="tel:+447441448082">{phone}</a>
             <a href="mailto:printerok9@gmail.com">printerok9@gmail.com</a>
-            <span>Homes & offices across the UK</span>
+            <span>Business customers only; coverage confirmed by postcode</span>
           </div>
           <div>
             <h4>Printer not cooperating?</h4>

@@ -16,127 +16,193 @@ export const locations: Location[] = [
     slug: "london",
     city: "London",
     region: "Greater London",
-    nearbyAreas: ["Croydon", "Ealing", "Romford", "Enfield", "Bromley", "Kingston upon Thames"],
+    nearbyAreas: [
+      "Croydon",
+      "Ealing",
+      "Romford",
+      "Enfield",
+      "Bromley",
+      "Kingston upon Thames",
+    ],
     localContext:
-      "From small home offices to busy commercial buildings across London's boroughs, printer downtime is rarely convenient. We arrange visits and remote sessions around your schedule, including outside standard office hours where possible.",
-    seoTitle: "Printer Repair in London | Onsite & Remote Support",
+      "We arrange printer repair visits for business and organisational customers. Share your business postcode, printer model and fault so we can confirm local engineer and parts availability before booking.",
+    seoTitle: "Business Printer Repair in London | Office Printer Servicing",
     metaDescription:
-      "Independent printer repair in London. Onsite visits arranged across Greater London, plus remote support for HP, Canon, Epson, Brother and other brands.",
-    h1: "Printer repair in London",
+      "Independent business printer repair in London. Office printer diagnosis and maintenance for organisations. Contact us with your postcode to check availability.",
+    h1: "Business printer repair in London",
     intro:
-      "Independent printer repair and support for homes and businesses in London, with onsite visits arranged across Greater London and remote help available immediately.",
+      "Independent printer repair and support for businesses and organisations in London, with onsite visits arranged across Greater London and business remote assistance subject to availability.",
   },
   {
     slug: "manchester",
     city: "Manchester",
     region: "Greater Manchester",
-    nearbyAreas: ["Salford", "Stockport", "Bolton", "Oldham", "Trafford", "Wigan"],
+    nearbyAreas: [
+      "Salford",
+      "Stockport",
+      "Bolton",
+      "Oldham",
+      "Trafford",
+      "Wigan",
+    ],
     localContext:
-      "Manchester's mix of city-centre offices and surrounding boroughs means printer setups vary a lot, from single home printers to shared office multifunction devices. We tailor the visit or remote session to what you're actually running.",
-    seoTitle: "Printer Repair in Manchester | Onsite & Remote Support",
+      "We arrange printer repair visits for business and organisational customers. Share your business postcode, printer model and fault so we can confirm local engineer and parts availability before booking.",
+    seoTitle:
+      "Business Printer Repair in Manchester | Office Printer Servicing",
     metaDescription:
-      "Independent printer repair in Manchester. Onsite visits arranged across Greater Manchester, plus remote support for HP, Canon, Epson, Brother and more.",
-    h1: "Printer repair in Manchester",
+      "Independent business printer repair in Manchester. Office printer diagnosis and maintenance for organisations. Contact us with your postcode to check availability.",
+    h1: "Business printer repair in Manchester",
     intro:
-      "Independent printer repair and support for homes and businesses in Manchester, with onsite visits arranged across Greater Manchester and remote troubleshooting available now.",
+      "Independent printer repair and support for businesses and organisations in Manchester, with onsite visits arranged across Greater Manchester and business remote assistance subject to availability.",
   },
   {
     slug: "birmingham",
     city: "Birmingham",
     region: "West Midlands",
-    nearbyAreas: ["Solihull", "Wolverhampton", "Dudley", "Sandwell", "Walsall", "West Bromwich"],
+    nearbyAreas: [
+      "Solihull",
+      "Wolverhampton",
+      "Dudley",
+      "Sandwell",
+      "Walsall",
+      "West Bromwich",
+    ],
     localContext:
-      "As one of the UK's largest business hubs, Birmingham has no shortage of office printers and copiers under daily pressure. We support both single-printer households and multi-device offices across the wider West Midlands.",
-    seoTitle: "Printer Repair in Birmingham | Onsite & Remote Support",
+      "We arrange printer repair visits for business and organisational customers. Share your business postcode, printer model and fault so we can confirm local engineer and parts availability before booking.",
+    seoTitle:
+      "Business Printer Repair in Birmingham | Office Printer Servicing",
     metaDescription:
-      "Independent printer repair in Birmingham. Onsite visits arranged across the West Midlands, plus remote support for HP, Canon, Epson, Brother and more.",
-    h1: "Printer repair in Birmingham",
+      "Independent business printer repair in Birmingham. Office printer diagnosis and maintenance for organisations. Contact us with your postcode to check availability.",
+    h1: "Business printer repair in Birmingham",
     intro:
-      "Independent printer repair and support for homes and businesses in Birmingham, with onsite visits arranged across the West Midlands and remote help available immediately.",
+      "Independent printer repair and support for businesses and organisations in Birmingham, with onsite visits arranged across the West Midlands and business remote assistance subject to availability.",
   },
   {
     slug: "leeds",
     city: "Leeds",
     region: "West Yorkshire",
-    nearbyAreas: ["Bradford", "Wakefield", "Huddersfield", "Halifax", "Pudsey", "Morley"],
+    nearbyAreas: [
+      "Bradford",
+      "Wakefield",
+      "Huddersfield",
+      "Halifax",
+      "Pudsey",
+      "Morley",
+    ],
     localContext:
-      "Leeds' financial, legal and professional services offices rely heavily on shared office printers staying online, while many households nearby run smaller inkjet setups. We support both.",
-    seoTitle: "Printer Repair in Leeds | Onsite & Remote Support",
+      "We arrange printer repair visits for business and organisational customers. Share your business postcode, printer model and fault so we can confirm local engineer and parts availability before booking.",
+    seoTitle: "Business Printer Repair in Leeds | Office Printer Servicing",
     metaDescription:
-      "Independent printer repair in Leeds. Onsite visits arranged across West Yorkshire, plus remote support for HP, Canon, Epson, Brother and other brands.",
-    h1: "Printer repair in Leeds",
+      "Independent business printer repair in Leeds. Office printer diagnosis and maintenance for organisations. Contact us with your postcode to check availability.",
+    h1: "Business printer repair in Leeds",
     intro:
-      "Independent printer repair and support for homes and businesses in Leeds, with onsite visits arranged across West Yorkshire and remote troubleshooting available now.",
+      "Independent printer repair and support for businesses and organisations in Leeds, with onsite visits arranged across West Yorkshire and business remote assistance subject to availability.",
   },
   {
     slug: "liverpool",
     city: "Liverpool",
     region: "Merseyside",
-    nearbyAreas: ["Wirral", "St Helens", "Sefton", "Knowsley", "Bootle", "Southport"],
+    nearbyAreas: [
+      "Wirral",
+      "St Helens",
+      "Sefton",
+      "Knowsley",
+      "Bootle",
+      "Southport",
+    ],
     localContext:
-      "Liverpool and the wider Merseyside area cover everything from waterfront offices to residential streets across the Wirral. We arrange appointments around your side of the Mersey and your printer's exact fault.",
-    seoTitle: "Printer Repair in Liverpool | Onsite & Remote Support",
+      "We arrange printer repair visits for business and organisational customers. Share your business postcode, printer model and fault so we can confirm local engineer and parts availability before booking.",
+    seoTitle: "Business Printer Repair in Liverpool | Office Printer Servicing",
     metaDescription:
-      "Independent printer repair in Liverpool. Onsite visits arranged across Merseyside, plus remote support for HP, Canon, Epson, Brother and other brands.",
-    h1: "Printer repair in Liverpool",
+      "Independent business printer repair in Liverpool. Office printer diagnosis and maintenance for organisations. Contact us with your postcode to check availability.",
+    h1: "Business printer repair in Liverpool",
     intro:
-      "Independent printer repair and support for homes and businesses in Liverpool, with onsite visits arranged across Merseyside and remote help available immediately.",
+      "Independent printer repair and support for businesses and organisations in Liverpool, with onsite visits arranged across Merseyside and business remote assistance subject to availability.",
   },
   {
     slug: "glasgow",
     city: "Glasgow",
     region: "Scotland",
-    nearbyAreas: ["Paisley", "East Kilbride", "Hamilton", "Cumbernauld", "Motherwell", "Clydebank"],
+    nearbyAreas: [
+      "Paisley",
+      "East Kilbride",
+      "Hamilton",
+      "Cumbernauld",
+      "Motherwell",
+      "Clydebank",
+    ],
     localContext:
-      "Glasgow sits at the centre of Scotland's Central Belt, so our appointments and remote sessions cover both the city and the surrounding towns that commute in and out of it daily.",
-    seoTitle: "Printer Repair in Glasgow | Onsite & Remote Support",
+      "We arrange printer repair visits for business and organisational customers. Share your business postcode, printer model and fault so we can confirm local engineer and parts availability before booking.",
+    seoTitle: "Business Printer Repair in Glasgow | Office Printer Servicing",
     metaDescription:
-      "Independent printer repair in Glasgow. Onsite visits arranged across the Central Belt, plus remote support for HP, Canon, Epson, Brother and more.",
-    h1: "Printer repair in Glasgow",
+      "Independent business printer repair in Glasgow. Office printer diagnosis and maintenance for organisations. Contact us with your postcode to check availability.",
+    h1: "Business printer repair in Glasgow",
     intro:
-      "Independent printer repair and support for homes and businesses in Glasgow, with onsite visits arranged across the Central Belt and remote troubleshooting available now.",
+      "Independent printer repair and support for businesses and organisations in Glasgow, with onsite visits arranged across the Central Belt and business remote assistance subject to availability.",
   },
   {
     slug: "bristol",
     city: "Bristol",
     region: "South West England",
-    nearbyAreas: ["Bath", "Weston-super-Mare", "Yate", "Keynsham", "Portishead", "Nailsea"],
+    nearbyAreas: [
+      "Bath",
+      "Weston-super-Mare",
+      "Yate",
+      "Keynsham",
+      "Portishead",
+      "Nailsea",
+    ],
     localContext:
-      "Bristol's mix of independent businesses, creative studios and home offices means printer needs range from occasional home use to daily commercial printing. We scope each visit to match.",
-    seoTitle: "Printer Repair in Bristol | Onsite & Remote Support",
+      "We arrange printer repair visits for business and organisational customers. Share your business postcode, printer model and fault so we can confirm local engineer and parts availability before booking.",
+    seoTitle: "Business Printer Repair in Bristol | Office Printer Servicing",
     metaDescription:
-      "Independent printer repair in Bristol. Onsite visits arranged across the South West, plus remote support for HP, Canon, Epson, Brother and other brands.",
-    h1: "Printer repair in Bristol",
+      "Independent business printer repair in Bristol. Office printer diagnosis and maintenance for organisations. Contact us with your postcode to check availability.",
+    h1: "Business printer repair in Bristol",
     intro:
-      "Independent printer repair and support for homes and businesses in Bristol, with onsite visits arranged across the wider South West and remote help available immediately.",
+      "Independent printer repair and support for businesses and organisations in Bristol, with onsite visits arranged across the wider South West and business remote assistance subject to availability.",
   },
   {
     slug: "sheffield",
     city: "Sheffield",
     region: "South Yorkshire",
-    nearbyAreas: ["Rotherham", "Barnsley", "Chesterfield", "Dronfield", "Worksop", "Doncaster"],
+    nearbyAreas: [
+      "Rotherham",
+      "Barnsley",
+      "Chesterfield",
+      "Dronfield",
+      "Worksop",
+      "Doncaster",
+    ],
     localContext:
-      "Sheffield and its neighbouring South Yorkshire towns include a steady mix of home offices and small business premises, all of which we support with the same appointment process.",
-    seoTitle: "Printer Repair in Sheffield | Onsite & Remote Support",
+      "We arrange printer repair visits for business and organisational customers. Share your business postcode, printer model and fault so we can confirm local engineer and parts availability before booking.",
+    seoTitle: "Business Printer Repair in Sheffield | Office Printer Servicing",
     metaDescription:
-      "Independent printer repair in Sheffield. Onsite visits arranged across South Yorkshire, plus remote support for HP, Canon, Epson, Brother and more.",
-    h1: "Printer repair in Sheffield",
+      "Independent business printer repair in Sheffield. Office printer diagnosis and maintenance for organisations. Contact us with your postcode to check availability.",
+    h1: "Business printer repair in Sheffield",
     intro:
-      "Independent printer repair and support for homes and businesses in Sheffield, with onsite visits arranged across South Yorkshire and remote troubleshooting available now.",
+      "Independent printer repair and support for businesses and organisations in Sheffield, with onsite visits arranged across South Yorkshire and business remote assistance subject to availability.",
   },
   {
     slug: "nottingham",
     city: "Nottingham",
     region: "East Midlands",
-    nearbyAreas: ["Derby", "Mansfield", "Loughborough", "Ilkeston", "Beeston", "West Bridgford"],
+    nearbyAreas: [
+      "Derby",
+      "Mansfield",
+      "Loughborough",
+      "Ilkeston",
+      "Beeston",
+      "West Bridgford",
+    ],
     localContext:
-      "Nottingham and the wider East Midlands cover a broad spread of home printer setups and small business offices, from the city centre out to surrounding towns.",
-    seoTitle: "Printer Repair in Nottingham | Onsite & Remote Support",
+      "We arrange printer repair visits for business and organisational customers. Share your business postcode, printer model and fault so we can confirm local engineer and parts availability before booking.",
+    seoTitle:
+      "Business Printer Repair in Nottingham | Office Printer Servicing",
     metaDescription:
-      "Independent printer repair in Nottingham. Onsite visits arranged across the East Midlands, plus remote support for HP, Canon, Epson, Brother and more.",
-    h1: "Printer repair in Nottingham",
+      "Independent business printer repair in Nottingham. Office printer diagnosis and maintenance for organisations. Contact us with your postcode to check availability.",
+    h1: "Business printer repair in Nottingham",
     intro:
-      "Independent printer repair and support for homes and businesses in Nottingham, with onsite visits arranged across the East Midlands and remote help available immediately.",
+      "Independent printer repair and support for businesses and organisations in Nottingham, with onsite visits arranged across the East Midlands and business remote assistance subject to availability.",
   },
 ];
 

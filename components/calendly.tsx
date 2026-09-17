@@ -26,10 +26,11 @@ export default function Calendly() {
   url.searchParams.set("primary_color", "2563eb");
   return (
     <div className="booking-options">
-      <h3>Choose a time online</h3>
+      <h3>Request a business appointment online</h3>
       <p>
-        Choose an available time and book with Calendly right here in this
-        section.
+        For business and organisational customers only. Choose a preferred time
+        with Calendly. Our team will confirm service coverage and appointment
+        availability before a visit is booked.
       </p>
       <iframe
         title="Book a Pinterok appointment with Calendly"
