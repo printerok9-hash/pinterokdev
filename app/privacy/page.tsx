@@ -96,8 +96,8 @@ export default function Privacy() {
           <section>
             <h2>Cookies</h2>
             <p>
-              The public website does not use advertising or analytics
-              cookies. The admin area sets a single essential session cookie
+              The public website uses the Google tag for Google Ads measurement
+              and may set advertising cookies. The admin area sets a single essential session cookie
               (<code>pinterok_session</code>) to keep authorised staff signed
               in; it is HTTP-only, restricted to the admin area, marked secure
               in production, and expires automatically after 8 hours or

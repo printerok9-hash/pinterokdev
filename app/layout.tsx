@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 const roboto = localFont({
   src: [
@@ -52,6 +53,19 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={roboto.variable}
     >
+      <head>
+        <Script id="google-tag-config" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18459531196');`}
+        </Script>
+        <Script
+          id="google-tag"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18459531196"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
