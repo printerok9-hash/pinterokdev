@@ -54,25 +54,22 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={roboto.variable}
     >
-      <body>
-        {GOOGLE_ADS_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-ads-tag" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GOOGLE_ADS_ID}');
-              `}
-            </Script>
-          </>
-        )}
-        {children}
-      </body>
+      {GOOGLE_ADS_ID && (
+        <head>
+          <Script
+            id="google-tag"
+            src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+            strategy="beforeInteractive"
+          />
+          <Script id="google-tag-config" strategy="beforeInteractive">
+            {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GOOGLE_ADS_ID}');`}
+          </Script>
+        </head>
+      )}
+      <body>{children}</body>
     </html>
   );
 }
