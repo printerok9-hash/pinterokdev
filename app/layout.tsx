@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
+import { GOOGLE_ADS_ID } from "@/lib/gtag";
 import "./globals.css";
 const roboto = localFont({
   src: [
@@ -52,7 +54,25 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={roboto.variable}
     >
-      <body>{children}</body>
+      <body>
+        {GOOGLE_ADS_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-ads-tag" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GOOGLE_ADS_ID}');
+              `}
+            </Script>
+          </>
+        )}
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,5 +1,21 @@
 "use client";
+import { useEffect } from "react";
+import { GOOGLE_ADS_BOOKING_CONVERSION, reportConversion } from "@/lib/gtag";
 export default function Calendly() {
+  useEffect(() => {
+    if (!GOOGLE_ADS_BOOKING_CONVERSION) return;
+    function handleCalendlyEvent(event: MessageEvent) {
+      if (
+        event.origin === "https://calendly.com" &&
+        (event.data as { event?: string } | undefined)?.event ===
+          "calendly.event_scheduled"
+      ) {
+        reportConversion(GOOGLE_ADS_BOOKING_CONVERSION);
+      }
+    }
+    window.addEventListener("message", handleCalendlyEvent);
+    return () => window.removeEventListener("message", handleCalendlyEvent);
+  }, []);
   const raw = process.env.NEXT_PUBLIC_CALENDLY_URL;
   let url: URL | undefined;
   try {

@@ -8,6 +8,7 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import PhoneText from "./phone-text";
+import { GOOGLE_ADS_ENQUIRY_CONVERSION, reportConversion } from "@/lib/gtag";
 export default function ContactForm({
   booking = false,
 }: {
@@ -33,6 +34,7 @@ export default function ContactForm({
       setState("success");
       setMessage(result.message);
       form.reset();
+      reportConversion(GOOGLE_ADS_ENQUIRY_CONVERSION);
     } catch {
       setState("error");
       setMessage(
