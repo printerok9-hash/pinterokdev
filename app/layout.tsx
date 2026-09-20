@@ -54,21 +54,21 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={roboto.variable}
     >
-      {GOOGLE_ADS_ID && (
-        <head>
-          <Script
-            id="google-tag"
-            src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
-            strategy="beforeInteractive"
-          />
-          <Script id="google-tag-config" strategy="beforeInteractive">
-            {`window.dataLayer = window.dataLayer || [];
+      <head>
+        <Script
+          id="google-tag"
+          src="https://www.googletagmanager.com/gtag/js?id=G-QQ01JPEPGL"
+          strategy="beforeInteractive"
+        />
+        <Script id="google-tag-config" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${GOOGLE_ADS_ID}');`}
-          </Script>
-          <Script id="google-click-conversion" strategy="beforeInteractive">
-            {`window.gtag_report_conversion = function(url, sendTo) {
+gtag('config', 'G-QQ01JPEPGL');
+${GOOGLE_ADS_ID ? `gtag('config', ${JSON.stringify(GOOGLE_ADS_ID).replace(/</g, "\\u003c")});` : ""}`}
+        </Script>
+        <Script id="google-click-conversion" strategy="beforeInteractive">
+          {`window.gtag_report_conversion = function(url, sendTo) {
   var destination = sendTo || ${JSON.stringify(GOOGLE_ADS_ENQUIRY_CONVERSION || "").replace(/</g, "\\u003c")};
   if (!destination || typeof window.gtag !== 'function') return false;
   window.gtag('event', 'conversion', {
@@ -79,9 +79,8 @@ gtag('config', '${GOOGLE_ADS_ID}');`}
   });
   return false;
 };`}
-          </Script>
-        </head>
-      )}
+        </Script>
+      </head>
       <body>{children}</body>
     </html>
   );
