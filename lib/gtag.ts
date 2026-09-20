@@ -1,6 +1,7 @@
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
+    gtag_report_conversion?: (url?: string, sendTo?: string) => boolean;
   }
 }
 
@@ -15,4 +16,9 @@ export function reportConversion(sendTo: string | undefined) {
   if (typeof window.gtag === "function") {
     window.gtag("event", "conversion", { send_to: sendTo });
   }
+}
+
+export function reportClickConversion(sendTo: string | undefined) {
+  if (!sendTo || typeof window === "undefined") return;
+  window.gtag_report_conversion?.(undefined, sendTo);
 }

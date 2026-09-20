@@ -8,7 +8,11 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import PhoneText from "./phone-text";
-import { GOOGLE_ADS_ENQUIRY_CONVERSION, reportConversion } from "@/lib/gtag";
+import {
+  GOOGLE_ADS_BOOKING_CONVERSION,
+  GOOGLE_ADS_ENQUIRY_CONVERSION,
+  reportClickConversion,
+} from "@/lib/gtag";
 export default function ContactForm({
   booking = false,
 }: {
@@ -34,7 +38,6 @@ export default function ContactForm({
       setState("success");
       setMessage(result.message);
       form.reset();
-      reportConversion(GOOGLE_ADS_ENQUIRY_CONVERSION);
     } catch {
       setState("error");
       setMessage(
@@ -184,7 +187,18 @@ export default function ContactForm({
               <PhoneText>{message}</PhoneText>
             </p>
           )}
-          <button className="button form-submit" disabled={state === "sending"}>
+          <button
+            type="submit"
+            className="button form-submit"
+            disabled={state === "sending"}
+            onClick={() =>
+              reportClickConversion(
+                booking
+                  ? GOOGLE_ADS_BOOKING_CONVERSION
+                  : GOOGLE_ADS_ENQUIRY_CONVERSION,
+              )
+            }
+          >
             {state === "sending"
               ? "Sending your request…"
               : booking

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
-import { GOOGLE_ADS_ID } from "@/lib/gtag";
+import { GOOGLE_ADS_ID, GOOGLE_ADS_ENQUIRY_CONVERSION } from "@/lib/gtag";
 import "./globals.css";
 const roboto = localFont({
   src: [
@@ -66,6 +66,19 @@ export default function RootLayout({
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${GOOGLE_ADS_ID}');`}
+          </Script>
+          <Script id="google-click-conversion" strategy="beforeInteractive">
+            {`window.gtag_report_conversion = function(url, sendTo) {
+  var destination = sendTo || ${JSON.stringify(GOOGLE_ADS_ENQUIRY_CONVERSION || "").replace(/</g, "\\u003c")};
+  if (!destination || typeof window.gtag !== 'function') return false;
+  window.gtag('event', 'conversion', {
+    send_to: destination,
+    event_callback: function() {
+      if (url) window.location.assign(url);
+    }
+  });
+  return false;
+};`}
           </Script>
         </head>
       )}
