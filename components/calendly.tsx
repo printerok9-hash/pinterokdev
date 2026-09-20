@@ -3,13 +3,14 @@ import { useEffect } from "react";
 import { GOOGLE_ADS_BOOKING_CONVERSION, reportConversion } from "@/lib/gtag";
 export default function Calendly() {
   useEffect(() => {
-    if (!GOOGLE_ADS_BOOKING_CONVERSION) return;
     function handleCalendlyEvent(event: MessageEvent) {
       if (
         event.origin === "https://calendly.com" &&
         (event.data as { event?: string } | undefined)?.event ===
           "calendly.event_scheduled"
       ) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: "calendly_booking_completed" });
         reportConversion(GOOGLE_ADS_BOOKING_CONVERSION);
       }
     }
