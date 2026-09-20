@@ -4243,6 +4243,40 @@ p {
   }
 }
 
+/* Keep the tap-to-call number visible below the mobile navigation controls. */
+@media (max-width: 760px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    height: auto;
+    padding-block: 12px 0;
+    row-gap: 8px;
+  }
+  .nav-actions {
+    display: contents;
+  }
+  .nav-actions .button {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .nav .menu-toggle {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .nav-phone {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: center;
+    min-height: 44px;
+    border-top: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  .nav-links {
+    top: 100%;
+  }
+}
+
 /* A dismissible ticket-style offer, clear of the WhatsApp control. */
 .repair-coupon {
   position: fixed;
