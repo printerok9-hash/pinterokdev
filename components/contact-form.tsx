@@ -38,6 +38,14 @@ export default function ContactForm({
       setState("success");
       setMessage(result.message);
       form.reset();
+      if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "contact_form_success",
+          form_id: "contact-form",
+          form_name: "Contact Form",
+        });
+      }
     } catch {
       setState("error");
       setMessage(
@@ -46,7 +54,7 @@ export default function ContactForm({
     }
   }
   return (
-    <form className="contact-form" onSubmit={submit}>
+    <form id="contact-form" className="contact-form" onSubmit={submit}>
       <div className="contact-form-heading">
         <div className="form-heading-top">
           <span className="form-heading-icon" aria-hidden="true">
