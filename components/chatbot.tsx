@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {
   FiMessageCircle,
@@ -81,13 +82,22 @@ type Message = { from: "bot" | "user"; text: string };
 const initialMessages: Message[] = [
   {
     from: "bot",
-    text: "Hi, I'm the Pinterok business repair assistant. We serve businesses and organisations exclusively and do not accept residential repair bookings. Tell me your organisation and what's going on with its printer, and I'll pass the details to our team.",
+    text: "Hello! Welcome to Pinterok. I'm Penny, your virtual printer repair assistant. How can I help you today? Choose an option below or tell me what's happening with your printer.",
   },
 ];
 
+const problemOptions = [
+  { label: "Printer offline / Wi-Fi issue", problem: "My printer is offline or won't connect to Wi-Fi." },
+  { label: "Paper jam", problem: "My printer has a paper jam or paper feeding problem." },
+  { label: "Poor print quality", problem: "My printer produces faded, blurry or streaky prints." },
+  { label: "Request a repair", problem: "I would like to request a printer repair appointment." },
+];
+
 export default function Chatbot() {
-  const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const [open, setOpen] = useState(true);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [pendingReplies, setPendingReplies] = useState<Message[]>(initialMessages);
+  const typing = pendingReplies.length > 0;
   const [step, setStep] = useState<Step>("problem");
   const [draft, setDraft] = useState("");
   const [inputError, setInputError] = useState("");
@@ -101,11 +111,28 @@ export default function Chatbot() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight });
-  }, [messages, step]);
+    if (!pendingReplies.length) return;
+    const timer = setTimeout(() => {
+      setMessages((current) => [...current, pendingReplies[0]]);
+      setPendingReplies((current) => current.slice(1));
+    }, 650);
+    return () => clearTimeout(timer);
+  }, [pendingReplies]);
+
+  useEffect(() => {
+    if (!open) return;
+    const frame = requestAnimationFrame(() => {
+      const container = scrollRef.current;
+      container?.scrollTo({
+        top: container.scrollHeight,
+        behavior: reduced ? "instant" : "smooth",
+      });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [messages, step, open, inputError, reduced, typing]);
 
   function addBot(text: string) {
-    setMessages((current) => [...current, { from: "bot", text }]);
+    setPendingReplies((current) => [...current, { from: "bot", text }]);
   }
   function addUser(text: string) {
     setMessages((current) => [...current, { from: "user", text }]);
@@ -132,11 +159,36 @@ export default function Chatbot() {
     }
   }
 
+  function chooseProblem(problem: string) {
+    if (typing) return;
+    addUser(problem);
+    setDraft("");
+    setInputError("");
+    setData((current) => ({ ...current, problem }));
+    addBot("I'd be happy to pass that on to our team. What's your name?");
+    setStep("name");
+  }
+
   function handleSend(e: React.FormEvent) {
     e.preventDefault();
+    if (typing) return;
     const value = draft.trim();
     if (step === "problem") {
-      if (value.length < 5) {
+      const greeting = value.toLowerCase().replace(/[^a-z\s]/g, "").replace(/\s+/g, " ").trim();
+      const isGreeting = /^(?:(?:hi+|he+llo+|he+y+|hiya|howdy|hello there|hi there)(?: penny)?|good morning|good afternoon|good evening|morning|afternoon|evening|how are you|hows it going)$/.test(greeting);
+      if (isGreeting) {
+        addUser(value);
+        setDraft("");
+        setInputError("");
+        const welcome = /morning|afternoon|evening/.test(greeting)
+          ? `${greeting.startsWith("good ") ? greeting.charAt(0).toUpperCase() + greeting.slice(1) : `Good ${greeting}`}!`
+          : /how are you|hows it going/.test(greeting)
+            ? "I'm ready to help, thanks for asking!"
+            : "Hi there! Lovely to hear from you.";
+        addBot(`${welcome} I'm Penny, your virtual assistant. How can I help with your printer today? Choose an option below or tell me about the problem.`);
+        return;
+      }
+      if (value.length < 10) {
         setInputError("Please tell us a little more about the problem.");
         return;
       }
@@ -204,7 +256,8 @@ export default function Chatbot() {
   }
 
   function reset() {
-    setMessages(initialMessages);
+    setMessages([]);
+    setPendingReplies(initialMessages);
     setStep("problem");
     setDraft("");
     setInputError("");
@@ -247,9 +300,22 @@ export default function Chatbot() {
             }}
           >
             <div className="chatbot-header">
-              <span>
-                <FiMessageCircle aria-hidden="true" /> Pinterok Assistant
-              </span>
+              <div className="chatbot-profile">
+                <Image
+                  src="/image/custr%20care%20representative-modified.png"
+                  alt="Customer care representative"
+                  width={44}
+                  height={44}
+                  className="chatbot-avatar"
+                />
+                <div className="chatbot-profile-details">
+                  <span>Penny — Pinterok Assistant</span>
+                  <span className="chatbot-online">
+                    <span className="chatbot-online-dot" aria-hidden="true" />
+                    Online · Virtual assistant
+                  </span>
+                </div>
+              </div>
               <button
                 type="button"
                 aria-label="Close chat"
@@ -264,7 +330,29 @@ export default function Chatbot() {
                   {m.text}
                 </div>
               ))}
-              {step === "off-topic" && (
+              {typing && (
+                <div className="chatbot-message bot chatbot-typing" role="status">
+                  <span className="chatbot-typing-dots" aria-hidden="true">
+                    <span /><span /><span />
+                  </span>
+                  Typing…
+                </div>
+              )}
+              {step === "problem" && !typing && (
+                <div className="chatbot-quick-replies chatbot-start-options" role="group" aria-label="Common printer requests">
+                  {problemOptions.map((option) => (
+                    <button
+                      key={option.label}
+                      type="button"
+                      className="chatbot-quick-reply"
+                      onClick={() => chooseProblem(option.problem)}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+              {step === "off-topic" && !typing && (
                 <div className="chatbot-quick-replies">
                   <a
                     className="chatbot-quick-reply"
@@ -289,7 +377,7 @@ export default function Chatbot() {
                   </button>
                 </div>
               )}
-              {step === "retry" && (
+              {step === "retry" && !typing && (
                 <div className="chatbot-quick-replies">
                   <a
                     className="chatbot-quick-reply"
@@ -314,7 +402,7 @@ export default function Chatbot() {
                   </button>
                 </div>
               )}
-              {step === "done" && (
+              {step === "done" && !typing && (
                 <div className="chatbot-quick-replies">
                   <button
                     type="button"
@@ -351,7 +439,7 @@ export default function Chatbot() {
                     maxLength={step === "address" ? 200 : 100}
                   />
                 )}
-                <button type="submit" aria-label="Send">
+                <button type="submit" aria-label="Send" disabled={typing}>
                   <FiSend />
                 </button>
               </form>

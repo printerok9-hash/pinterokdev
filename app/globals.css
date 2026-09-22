@@ -4651,10 +4651,38 @@ p {
   font-size: 13px;
   font-weight: 600;
 }
-.chatbot-header > span {
+.chatbot-profile {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+}
+.chatbot-avatar {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+}
+.chatbot-profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.chatbot-online {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 400;
+}
+.chatbot-online-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 3px #4ade8026;
 }
 .chatbot-header button {
   background: none;
@@ -4666,7 +4694,9 @@ p {
 }
 .chatbot-messages {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 14px 16px;
   display: flex;
   flex-direction: column;
@@ -4715,6 +4745,48 @@ p {
 }
 .chatbot-quick-reply:hover {
   border-color: var(--blue);
+}
+.chatbot-start-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+.chatbot-start-options .chatbot-quick-reply {
+  padding: 6px 8px;
+  min-height: 36px;
+  font-size: 11px;
+  line-height: 1.3;
+  border-radius: 8px;
+}
+.chatbot-typing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+}
+.chatbot-typing-dots {
+  display: flex;
+  gap: 3px;
+}
+.chatbot-typing-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: chatbot-typing 900ms ease-in-out infinite alternate;
+}
+.chatbot-typing-dots span:nth-child(2) { animation-delay: 150ms; }
+.chatbot-typing-dots span:nth-child(3) { animation-delay: 300ms; }
+@keyframes chatbot-typing {
+  from { opacity: 0.35; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(-3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chatbot-typing-dots span { animation: none; }
+}
+.chatbot-input-row button:disabled {
+  opacity: 0.5;
+  cursor: wait;
 }
 .chatbot-quick-reply.primary {
   background: var(--blue);
