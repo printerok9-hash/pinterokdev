@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   FiArrowUpRight,
   FiShield,
@@ -18,6 +19,7 @@ export default function ContactForm({
 }: {
   booking?: boolean;
 }) {
+  const router = useRouter();
   const [state, setState] = useState<"idle" | "sending" | "success" | "error">(
     "idle",
   );
@@ -35,6 +37,7 @@ export default function ContactForm({
       });
       const result = await r.json();
       if (!r.ok) throw new Error(result.error || "Please try again.");
+      router.push("/thank-you");
       setState("success");
       setMessage(result.message);
       form.reset();

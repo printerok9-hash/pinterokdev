@@ -1,7 +1,9 @@
 "use client";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { GOOGLE_ADS_BOOKING_CONVERSION, reportConversion } from "@/lib/gtag";
 export default function Calendly() {
+  const router = useRouter();
   useEffect(() => {
     function handleCalendlyEvent(event: MessageEvent) {
       if (
@@ -12,11 +14,12 @@ export default function Calendly() {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ event: "calendly_booking_completed" });
         reportConversion(GOOGLE_ADS_BOOKING_CONVERSION);
+        router.push("/thank-you");
       }
     }
     window.addEventListener("message", handleCalendlyEvent);
     return () => window.removeEventListener("message", handleCalendlyEvent);
-  }, []);
+  }, [router]);
   const raw = process.env.NEXT_PUBLIC_CALENDLY_URL;
   let url: URL | undefined;
   try {

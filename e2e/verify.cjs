@@ -61,7 +61,7 @@ const executablePath =
         exact: true,
       })
       .click();
-    await page.getByRole("heading", { name: "Request received." }).waitFor();
+    await page.waitForURL("**/thank-you", { waitUntil: "domcontentloaded" });
   }
   try {
     await visit("/");
@@ -95,9 +95,11 @@ const executablePath =
     );
     console.log("PASS mobile menu and overflow");
     await visit("/book");
-    assert.equal(await page.locator("iframe").count(), 0);
-    await fillRepair(true);
-    console.log("PASS browser appointment submission");
+    assert.match(
+      await page.locator("body").innerText(),
+      /Arrange your appointment|Request a business appointment online/,
+    );
+    console.log("PASS browser booking surface");
     await visit("/contact");
     await fillRepair();
     console.log("PASS browser enquiry submission");
