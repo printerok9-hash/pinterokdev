@@ -598,7 +598,7 @@ export default function Dashboard() {
                           }
                           minLength={key === "name" ? 2 : undefined}
                           pattern={
-                            key === "phone" ? "[+0-9 ()-]{7,25}" : undefined
+                            key === "phone" ? "[+0-9 \\(\\)\\-]{7,25}" : undefined
                           }
                           onChange={(e) =>
                             setEditor({ ...editor, [key]: e.target.value })

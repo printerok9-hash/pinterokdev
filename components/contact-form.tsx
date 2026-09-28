@@ -110,7 +110,7 @@ export default function ContactForm({
                 name="phone"
                 placeholder="Your contact number"
                 autoComplete="tel"
-                pattern="[+0-9 ()-]{7,25}"
+                pattern={"[+0-9 \\(\\)\\-]{7,25}"}
                 required
               />
             </label>
